@@ -3,6 +3,7 @@
             [sketches.fire :as f]
             [sketches.spiral :as s]
             [sketches.random-walk :as rw]
+            [sketches.random-walk-dynamic :as rwd]
             [sketches.paint-splatter :as p]
             [sketches.noise :as n]))
 
@@ -41,6 +42,7 @@
     [:h2.tracked "Introduction"]
     [:div.flex.flex-wrap.justify-start
      [sketch "Random Walk" "Exercise I.1" "https://natureofcode.com/book/introduction/#exercise-i1" rw/run-random-walk]
+     [sketch "Random Walk II" "Exercise I.3" "https://natureofcode.com/book/introduction/#exercise-i3" rwd/run-random-walk-dynamic]
      #_[sketch "Paint Splatter" p/run-paint-splatter]
      #_[sketch "Noise" n/run-noise]
      [card "in progress" "-" "🚧"]]]
