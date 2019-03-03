@@ -7,7 +7,7 @@
 (defn sketch [title children]
   (let [isStarted (r/atom false)]
     (fn []
-      [:div {:class "bg-white br2 flex flex-column justify-between items-center f2 black mr3"}
+      [:div {:class "bg-white br2 flex flex-column justify-between items-center f2 black mb3 mr3-ns"}
        [:div.w5.h5.pa4
         (if @isStarted
           [children]
@@ -28,6 +28,6 @@
 
 (r/render [:main {:class "vh-100 sans-serif f1 pa4 white"
                   :style {:background-color "#514745"}}
-           [:div {:class "flex"}
+           [:div {:class "flex flex-wrap justify-center justify-start-ns"}
             [sketch "Fire" fire]
             [sketch "Spiral" spiral]]] (.getElementById js/document "app"))
