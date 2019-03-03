@@ -1,6 +1,5 @@
 (ns sketches.core
-  (:require [quil.core :as q]
-            [reagent.core :as r]
+  (:require [reagent.core :as r]
             [sketches.fire :as f]
             [sketches.spiral :as s]))
 
