@@ -4,6 +4,8 @@
             [sketches.spiral :as s]
             [sketches.random-walk :as rw]
             [sketches.random-walk-dynamic :as rwd]
+            [sketches.random-walk-gaussian :as rwg]
+            [sketches.random-walk-custom-step :as rwc]
             [sketches.paint-splatter :as p]
             [sketches.noise :as n]))
 
@@ -41,9 +43,11 @@
    [:div
     [:h2.tracked "Introduction"]
     [:div.flex.flex-wrap.justify-start
-     [sketch "Random Walk" "Exercise I.1" "https://natureofcode.com/book/introduction/#exercise-i1" rw/run-random-walk]
-     [sketch "Random Walk II" "Exercise I.3" "https://natureofcode.com/book/introduction/#exercise-i3" rwd/run-random-walk-dynamic]
-     #_[sketch "Paint Splatter" p/run-paint-splatter]
+     [sketch "Random Walk" "Exercise I.1" "https://natureofcode.com/book/introduction/#exercise-i1" rw/run]
+     [sketch "Random Walk II" "Exercise I.3" "https://natureofcode.com/book/introduction/#exercise-i3" rwd/run]
+     [sketch "Paint Splatter" "Exercise I.4" "https://natureofcode.com/book/introduction/#exercise-i4" p/run]
+     [sketch "Random Walk III" "Exercise I.5" "https://natureofcode.com/book/introduction/#exercise-i5" rwg/run]
+     [sketch "Random Walk IV" "Exercise I.6" "https://natureofcode.com/book/introduction/#exercise-i6" rwc/run]
      #_[sketch "Noise" n/run-noise]
      [card "in progress" "-" "🚧"]]]
    [:div
@@ -58,7 +62,7 @@
    [:div
     [:h2.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start
-     #_[sketch "Fire" f/run-fire]
+     [sketch "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]
      [card "in progress" "-" "🚧"]]]])
 
 (r/render app (.getElementById js/document "app"))

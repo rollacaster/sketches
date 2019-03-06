@@ -52,7 +52,7 @@
   (q/background 0)
   (swap! particle-system (comp add-particle add-particle run-particle-system)))
 
-(defn run-fire [host]
+(defn run [host]
   (q/defsketch particle
     :host host
     :setup setup

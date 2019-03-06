@@ -11,7 +11,7 @@
             (+ (* (q/random-gaussian) 50) 255))
     (q/ellipse x y 10 10)))
 
-(defn run-paint-splatter [host]
+(defn run [host]
   (q/defsketch paint-splatter
     :host host
     :draw draw

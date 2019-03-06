@@ -17,7 +17,7 @@
     (let [[x y] (swap! location #(v/add % velocity))]
       (q/point x y))))
 
-(defn run-random-walk [host]
+(defn run [host]
   (q/defsketch random-walk
     :host host
     :setup setup
