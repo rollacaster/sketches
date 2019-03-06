@@ -44,17 +44,19 @@
         (update :particles #(map update-particle %))
         (update :particles #(remove is-dead %)))))
 
-(defn setup []
-  (set! (.-globalCompositeOperation (.getContext (.getElementById js/document "fire") "2d")) "lighter"))
+(defn setup [host]
+  (fn []
+    (set! (.-globalCompositeOperation (.getContext (.getElementById js/document host) "2d")) "lighter")))
 
-(defn draw []
-  (.clearRect (.getContext (.getElementById js/document "fire") "2d") 0 0 (q/width) (q/height))
-  (q/background 0)
-  (swap! particle-system (comp add-particle add-particle run-particle-system)))
+(defn draw [host]
+  (fn []
+    (.clearRect (.getContext (.getElementById js/document host) "2d") 0 0 (q/width) (q/height))
+    (q/background 0)
+    (swap! particle-system (comp add-particle add-particle run-particle-system))))
 
 (defn run [host]
   (q/defsketch particle
     :host host
-    :setup setup
-    :draw draw
+    :setup (setup host)
+    :draw (draw host)
     :size [300 300]))
