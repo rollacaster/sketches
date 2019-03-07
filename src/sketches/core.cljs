@@ -7,6 +7,7 @@
             [sketches.random-walk-gaussian :as rwg]
             [sketches.random-walk-custom-step :as rwc]
             [sketches.paint-splatter :as p]
+            [sketches.random-walk-noise :as rwn]
             [sketches.noise :as n]))
 
 (defn card [title sub-title children]
@@ -48,6 +49,7 @@
      [sketch "Paint Splatter" "Exercise I.4" "https://natureofcode.com/book/introduction/#exercise-i4" p/run]
      [sketch "Random Walk III" "Exercise I.5" "https://natureofcode.com/book/introduction/#exercise-i5" rwg/run]
      [sketch "Random Walk IV" "Exercise I.6" "https://natureofcode.com/book/introduction/#exercise-i6" rwc/run]
+     [sketch "Random Walk V" "Exercise I.7" "https://natureofcode.com/book/introduction/#exercise-i7" rwn/run]
      #_[sketch "Noise" n/run-noise]
      [card "in progress" "-" "🚧"]]]
    [:div
