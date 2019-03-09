@@ -8,6 +8,7 @@
             [sketches.random-walk-custom-step :as rwc]
             [sketches.paint-splatter :as p]
             [sketches.random-walk-noise :as rwn]
+            [sketches.noise-detail :as nd]
             [sketches.noise :as n]))
 
 (defn card [title sub-title children]
@@ -25,7 +26,7 @@
       [card
        title
        [:a.link.bb {:href exercise-link :target "_blank"} exercise-title]
-       (if @isStarted
+       (if (or @isStarted (= title "Noise Detail"))
          (let [canvas-id (str (random-uuid))]
            [(with-meta (fn [] [:canvas.w-100.br-100.ba.b--gray {:id canvas-id}])
               {:component-did-mount #(run-sketch canvas-id)})])
@@ -50,6 +51,7 @@
      [sketch "Random Walk III" "Exercise I.5" "https://natureofcode.com/book/introduction/#exercise-i5" rwg/run]
      [sketch "Random Walk IV" "Exercise I.6" "https://natureofcode.com/book/introduction/#exercise-i6" rwc/run]
      [sketch "Random Walk V" "Exercise I.7" "https://natureofcode.com/book/introduction/#exercise-i7" rwn/run]
+     [sketch "Noise Detail" "Exercise I.8" "https://natureofcode.com/book/introduction/#exercise-i8" nd/run]
      #_[sketch "Noise" n/run-noise]
      [card "in progress" "-" "🚧"]]]
    [:div
