@@ -9,7 +9,7 @@
             [sketches.paint-splatter :as p]
             [sketches.random-walk-noise :as rwn]
             [sketches.noise-detail :as nd]
-            [sketches.noise :as n]))
+            [sketches.noise-animate :as na]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f2.black.mb3.mr3-ns
@@ -20,13 +20,13 @@
    [:div.mb3.f4
     sub-title]])
 
-(defn sketch [title exercise-title exercise-link run-sketch]
+(defn sketch [title exercise-title exercise-link run-sketch run-immediately]
   (let [isStarted (r/atom false)]
     (fn []
       [card
        title
        [:a.link.bb {:href exercise-link :target "_blank"} exercise-title]
-       (if (or @isStarted (= title "Noise Detail"))
+       (if (or @isStarted run-immediately)
          (let [canvas-id (str (random-uuid))]
            [(with-meta (fn [] [:canvas.w-100.br-100.ba.b--gray {:id canvas-id}])
               {:component-did-mount #(run-sketch canvas-id)})])
@@ -52,7 +52,7 @@
      [sketch "Random Walk IV" "Exercise I.6" "https://natureofcode.com/book/introduction/#exercise-i6" rwc/run]
      [sketch "Random Walk V" "Exercise I.7" "https://natureofcode.com/book/introduction/#exercise-i7" rwn/run]
      [sketch "Noise Detail" "Exercise I.8" "https://natureofcode.com/book/introduction/#exercise-i8" nd/run]
-     #_[sketch "Noise" n/run-noise]
+     [sketch "Noise Animate" "Exercise I.9" "https://natureofcode.com/book/introduction/#exercise-i9" na/run]
      [card "in progress" "-" "🚧"]]]
    [:div
     [:h2.tracked "Vectors"]

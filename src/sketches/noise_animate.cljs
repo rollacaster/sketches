@@ -1,7 +1,8 @@
-(ns sketches.noise
+(ns sketches.noise-animate
   (:require [quil.core :as q :include-macros true]))
 
 (defn setup []
+  (q/frame-rate 3)
   (q/background 255))
 
 (def zoff (atom 0))
@@ -20,7 +21,7 @@
           (swap! xoff #(+ 0.05 %)))))
     (swap! zoff #(+ 0.05 %))))
 
-(defn run-noise [host]
+(defn run [host]
   (q/defsketch noise
     :host host
     :setup setup
