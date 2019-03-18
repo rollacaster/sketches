@@ -9,6 +9,7 @@
             [sketches.paint-splatter :as p]
             [sketches.random-walk-noise :as rwn]
             [sketches.noise-detail :as nd]
+            [sketches.noise-terrain :as nt]
             [sketches.noise-animate :as na]))
 
 (defn card [title sub-title children]
@@ -53,7 +54,7 @@
      [sketch "Random Walk V" "Exercise I.7" "https://natureofcode.com/book/introduction/#exercise-i7" rwn/run]
      [sketch "Noise Detail" "Exercise I.8" "https://natureofcode.com/book/introduction/#exercise-i8" nd/run]
      [sketch "Noise Animate" "Exercise I.9" "https://natureofcode.com/book/introduction/#exercise-i9" na/run]
-     [card "in progress" "-" "🚧"]]]
+     [sketch "Noise Terrain" "Exercise I.10" "https://natureofcode.com/book/introduction/#exercise-i10" nt/run]]]
    [:div
     [:h2.tracked "Vectors"]
     [:div.flex.flex-wrap.justify-start
