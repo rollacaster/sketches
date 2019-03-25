@@ -10,7 +10,8 @@
             [sketches.random-walk-noise :as rwn]
             [sketches.noise-detail :as nd]
             [sketches.noise-terrain :as nt]
-            [sketches.noise-animate :as na]))
+            [sketches.noise-animate :as na]
+            [sketches.bouncing-ball :as bb]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f2.black.mb3.mr3-ns
@@ -58,6 +59,7 @@
    [:div
     [:h2.tracked "Vectors"]
     [:div.flex.flex-wrap.justify-start
+     [sketch "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]
      [card "in progress" "-" "🚧"]]]
    [:div
     [:h2.tracked "Oscillation"]
