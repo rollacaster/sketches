@@ -13,7 +13,7 @@
             [sketches.nature-of-code.random-walk-noise :as rwn]))
 
 (defn card [title sub-title children]
-  [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f2.black.mb3.mr3-ns
+  [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
    [:div.w5.h5.pa4.flex.justify-center.items-center
     children]
    [:div.mt3
@@ -49,7 +49,7 @@
      [:a.pointer.bb.link.white {:href "https://natureofcode.com/"} "Nature of Code"]
      " implemented in ClojureScript."]]
    [:div
-    [:h2.tracked "Introduction"]
+    [:h3.tracked "Introduction"]
     [:div.flex.flex-wrap.justify-start
      [sketch "Random Walk" "Exercise I.1" "https://natureofcode.com/book/introduction/#exercise-i1" rw/run]
      [sketch "Random Walk II" "Exercise I.3" "https://natureofcode.com/book/introduction/#exercise-i3" rwd/run]
@@ -61,22 +61,35 @@
      [sketch "Noise Animate" "Exercise I.9" "https://natureofcode.com/book/introduction/#exercise-i9" na/run]
      [sketch "Noise Terrain" "Exercise I.10" "https://natureofcode.com/book/introduction/#exercise-i10" nt/run]]]
    [:div
-    [:h2.tracked "Vectors"]
+    [:h3.tracked "Vectors"]
     [:div.flex.flex-wrap.justify-start
      [sketch "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]
      [card "in progress" "-" "🚧"]]]
    [:div
-    [:h2.tracked "Oscillation"]
+    [:h3.tracked "Oscillation"]
     [:div.flex.flex-wrap.justify-start
      [card "in progress" "-" "🚧"]]]
    [:div
-    [:h2.tracked "Particle Systems"]
+    [:h3.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start
      [sketch "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]
      [card "in progress" "-" "🚧"]]]])
 
+(defn generative-artistry []
+  [:<>
+   [section
+    "Generative Artistry"
+    [:<>
+     "Exercises of "
+     [:a.pointer.bb.link.white {:href "https://twitter.com/twholman?"} "Tim Holman's"] " "
+     [:a.pointer.bb.link.white {:href "https://generativeartistry.com/"} "Generative Artistry"]
+     " implemented in ClojureScript."]]])
+
 (defn app []
   [:main.sans-serif.pa4.white
-   [nature-of-code]])
+   [:div.mb5
+    [nature-of-code]]
+   [:div.mb5
+    [generative-artistry]]])
 
 (r/render app (.getElementById js/document "app"))
