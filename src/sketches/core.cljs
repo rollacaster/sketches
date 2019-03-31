@@ -1,6 +1,7 @@
 (ns sketches.core
   (:require [reagent.core :as r]
             [sketches.generative-artistry.tiled-lines :as tl]
+            [sketches.generative-artistry.joy-division :as jd]
             [sketches.nature-of-code.bouncing-ball :as bb]
             [sketches.nature-of-code.fire :as f]
             [sketches.nature-of-code.noise-animate :as na]
@@ -64,17 +65,11 @@
    [:div
     [:h3.tracked "Vectors"]
     [:div.flex.flex-wrap.justify-start
-     [sketch "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]
-     [card "in progress" "-" "🚧"]]]
-   [:div
-    [:h3.tracked "Oscillation"]
-    [:div.flex.flex-wrap.justify-start
-     [card "in progress" "-" "🚧"]]]
+     [sketch "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]]]
    [:div
     [:h3.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start
-     [sketch "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]
-     [card "in progress" "-" "🚧"]]]])
+     [sketch "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]])
 
 (defn generative-artistry []
   [:<>
@@ -86,7 +81,8 @@
      [:a.pointer.bb.link.white {:href "https://generativeartistry.com/"} "Generative Artistry"]
      " implemented in ClojureScript."]]
    [:div.flex.flex-wrap.justify-start
-    [sketch "01" "Tiled Lines" "https://generativeartistry.com/tutorials/tiled-lines/" tl/run]]])
+    [sketch "01" "Tiled Lines" "https://generativeartistry.com/tutorials/tiled-lines/" tl/run]
+    [sketch "02" "Joy Division" "https://generativeartistry.com/tutorials/joy-division/" jd/run]]])
 
 (defn app []
   [:main.sans-serif.pa4.white
