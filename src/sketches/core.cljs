@@ -10,8 +10,7 @@
             [sketches.nature-of-code.random-walk-custom-step :as rwc]
             [sketches.nature-of-code.random-walk-dynamic :as rwd]
             [sketches.nature-of-code.random-walk-gaussian :as rwg]
-            [sketches.nature-of-code.random-walk-noise :as rwn]
-            [sketches.nature-of-code.spiral :as s]))
+            [sketches.nature-of-code.random-walk-noise :as rwn]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f2.black.mb3.mr3-ns
@@ -35,15 +34,20 @@
          [:div.h-100.w-100.br-100.flex.justify-center.items-center.bg-gray
           [:button.button.bg-transparent.bn.white.pointer {:on-click #(reset! isStarted true)} "▶"]])])))
 
-(defn app []
-  [:main.sans-serif.pa4.white
-   [:div.mb5
-    [:h1 "Nature of Code - Exercises"]
-    [:p.f4.lh-title "Exercises of "
+(defn section [title description]
+  [:div.mb4
+     [:h2 title]
+     [:p.f4.lh-title description ]])
+
+(defn nature-of-code []
+  [:<>
+   [section
+    "Nature of Code - Exercises"
+    [:<>
+     "Exercises of "
      [:a.pointer.bb.link.white {:href "https://twitter.com/shiffman"} "Daniel Shiffman's"] " "
      [:a.pointer.bb.link.white {:href "https://natureofcode.com/"} "Nature of Code"]
-     " implemented in ClojureScript."]
-    [:p [:a.pointer.bb.link.white {:href "https://github.com/rollacaster/sketches"} "GitHub"]]]
+     " implemented in ClojureScript."]]
    [:div
     [:h2.tracked "Introduction"]
     [:div.flex.flex-wrap.justify-start
@@ -64,12 +68,15 @@
    [:div
     [:h2.tracked "Oscillation"]
     [:div.flex.flex-wrap.justify-start
-     #_[sketch "Spiral" s/run-spiral]
      [card "in progress" "-" "🚧"]]]
    [:div
     [:h2.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start
      [sketch "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]
      [card "in progress" "-" "🚧"]]]])
+
+(defn app []
+  [:main.sans-serif.pa4.white
+   [nature-of-code]])
 
 (r/render app (.getElementById js/document "app"))
