@@ -39,12 +39,12 @@
 (defn section [title description]
   [:div.mb4
      [:h2 title]
-     [:p.f4.lh-title description ]])
+     [:p description]])
 
 (defn nature-of-code []
   [:<>
    [section
-    "Nature of Code - Exercises"
+    "Nature of Code"
     [:<>
      "Exercises of "
      [:a.pointer.bb.link.white {:href "https://twitter.com/shiffman"} "Daniel Shiffman's"] " "
@@ -86,6 +86,9 @@
 
 (defn app []
   [:main.sans-serif.pa4.white
+   [:div.mb5
+    [:h1 "Sketches by "
+     [:a.pointer.bb.link.white {:href "https://twitter.com/rollacaster"} "@rollacaster"]]]
    [:div.mb5
     [nature-of-code]]
    [:div.mb5

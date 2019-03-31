@@ -1,2 +1,0 @@
-# sketches
-WIP quil sketches
