@@ -1,4 +1,4 @@
-(ns sketches.noise-detail
+(ns sketches.nature-of-code.noise-detail
   (:require [quil.core :as q :include-macros true]))
 
 ;; float xoff = 0.0;

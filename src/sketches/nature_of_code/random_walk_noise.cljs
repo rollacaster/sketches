@@ -1,6 +1,6 @@
-(ns sketches.random-walk-noise
+(ns sketches.nature-of-code.random-walk-noise
   (:require [quil.core :as q :include-macros true]
-            [sketches.vector :as v]))
+            [sketches.nature-of-code.vector :as v]))
 
 (defn setup []
   (def walker (atom [(/ (q/width) 2) (/ (q/height) 2)]))

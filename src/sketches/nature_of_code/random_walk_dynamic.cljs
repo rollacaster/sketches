@@ -1,6 +1,6 @@
-(ns sketches.random-walk-dynamic
+(ns sketches.nature-of-code.random-walk-dynamic
   (:require [quil.core :as q :include-macros true]
-            [sketches.vector :as v]))
+            [sketches.nature-of-code.vector :as v]))
 
 (defn setup []
   (def location (atom [(/ (q/width) 2) (/ (q/height) 2)]))

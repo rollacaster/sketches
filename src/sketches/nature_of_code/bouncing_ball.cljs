@@ -1,4 +1,4 @@
-(ns sketches.bouncing-ball
+(ns sketches.nature-of-code.bouncing-ball
   (:require [quil.core :as q :include-macros true]))
 
 (def location (atom (hash-map :x 0 :y 0 :z 0)))

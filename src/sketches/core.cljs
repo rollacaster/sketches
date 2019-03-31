@@ -1,17 +1,17 @@
 (ns sketches.core
   (:require [reagent.core :as r]
-            [sketches.fire :as f]
-            [sketches.spiral :as s]
-            [sketches.random-walk :as rw]
-            [sketches.random-walk-dynamic :as rwd]
-            [sketches.random-walk-gaussian :as rwg]
-            [sketches.random-walk-custom-step :as rwc]
-            [sketches.paint-splatter :as p]
-            [sketches.random-walk-noise :as rwn]
-            [sketches.noise-detail :as nd]
-            [sketches.noise-terrain :as nt]
-            [sketches.noise-animate :as na]
-            [sketches.bouncing-ball :as bb]))
+            [sketches.nature-of-code.bouncing-ball :as bb]
+            [sketches.nature-of-code.fire :as f]
+            [sketches.nature-of-code.noise-animate :as na]
+            [sketches.nature-of-code.noise-detail :as nd]
+            [sketches.nature-of-code.noise-terrain :as nt]
+            [sketches.nature-of-code.paint-splatter :as p]
+            [sketches.nature-of-code.random-walk :as rw]
+            [sketches.nature-of-code.random-walk-custom-step :as rwc]
+            [sketches.nature-of-code.random-walk-dynamic :as rwd]
+            [sketches.nature-of-code.random-walk-gaussian :as rwg]
+            [sketches.nature-of-code.random-walk-noise :as rwn]
+            [sketches.nature-of-code.spiral :as s]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f2.black.mb3.mr3-ns

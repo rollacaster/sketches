@@ -1,6 +1,6 @@
-(ns sketches.random-walk-gaussian
+(ns sketches.nature-of-code.random-walk-gaussian
   (:require [quil.core :as q :include-macros true]
-            [sketches.vector :as v]))
+            [sketches.nature-of-code.vector :as v]))
 
 (defn setup []
   (def walker (atom [150 150]))

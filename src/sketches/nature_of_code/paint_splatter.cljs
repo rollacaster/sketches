@@ -1,4 +1,4 @@
-(ns sketches.paint-splatter
+(ns sketches.nature-of-code.paint-splatter
   (:require [quil.core :as q :include-macros true]))
 
 (defn draw []

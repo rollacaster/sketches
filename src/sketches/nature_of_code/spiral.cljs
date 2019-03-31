@@ -1,6 +1,6 @@
-(ns sketches.spiral
+(ns sketches.nature-of-code.spiral
   (:require [quil.core :as q :include-macros true]
-            [sketches.vector :as v]))
+            [sketches.nature-of-code.vector :as v]))
 
 (def delta (atom 0))
 

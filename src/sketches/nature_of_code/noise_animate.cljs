@@ -1,4 +1,4 @@
-(ns sketches.noise-animate
+(ns sketches.nature-of-code.noise-animate
   (:require [quil.core :as q :include-macros true]))
 
 (defn setup []

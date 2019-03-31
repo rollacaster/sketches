@@ -1,4 +1,4 @@
-(ns sketches.noise-terrain
+(ns sketches.nature-of-code.noise-terrain
   (:require [quil.core :as q]))
 
 (defn setup []

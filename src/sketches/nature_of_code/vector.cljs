@@ -1,4 +1,4 @@
-(ns sketches.vector)
+(ns sketches.nature-of-code.vector)
 
 (defn add [v1 v2]
   (vector (+ (first v1) (first v2))

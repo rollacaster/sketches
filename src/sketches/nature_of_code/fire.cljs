@@ -1,6 +1,6 @@
-(ns sketches.fire
+(ns sketches.nature-of-code.fire
   (:require [quil.core :as q :include-macros true]
-            [sketches.vector :as v]))
+            [sketches.nature-of-code.vector :as v]))
 
 (def particle-system (atom {:particles () :origin [150 200]}))
 
