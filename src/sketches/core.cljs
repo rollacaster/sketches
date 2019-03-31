@@ -1,5 +1,6 @@
 (ns sketches.core
   (:require [reagent.core :as r]
+            [sketches.generative-artistry.tiled-lines :as tl]
             [sketches.nature-of-code.bouncing-ball :as bb]
             [sketches.nature-of-code.fire :as f]
             [sketches.nature-of-code.noise-animate :as na]
@@ -83,7 +84,9 @@
      "Exercises of "
      [:a.pointer.bb.link.white {:href "https://twitter.com/twholman?"} "Tim Holman's"] " "
      [:a.pointer.bb.link.white {:href "https://generativeartistry.com/"} "Generative Artistry"]
-     " implemented in ClojureScript."]]])
+     " implemented in ClojureScript."]]
+   [:div.flex.flex-wrap.justify-start
+    [sketch "01" "Tiled Lines" "https://generativeartistry.com/tutorials/tiled-lines/" tl/run]]])
 
 (defn app []
   [:main.sans-serif.pa4.white
