@@ -2,6 +2,7 @@
   (:require [reagent.core :as r]
             [sketches.generative-artistry.tiled-lines :as tl]
             [sketches.generative-artistry.joy-division :as jd]
+            [sketches.generative-artistry.cubic-disarray :as cd]
             [sketches.nature-of-code.bouncing-ball :as bb]
             [sketches.nature-of-code.fire :as f]
             [sketches.nature-of-code.noise-animate :as na]
@@ -82,7 +83,8 @@
      " implemented in ClojureScript."]]
    [:div.flex.flex-wrap.justify-start
     [sketch "01" "Tiled Lines" "https://generativeartistry.com/tutorials/tiled-lines/" tl/run]
-    [sketch "02" "Joy Division" "https://generativeartistry.com/tutorials/joy-division/" jd/run]]])
+    [sketch "02" "Joy Division" "https://generativeartistry.com/tutorials/joy-division/" jd/run]
+    [sketch "03" "Cubic Disarray" "https://generativeartistry.com/tutorials/cubic-disarray/" cd/run]]])
 
 (defn app []
   [:main.sans-serif.pa4.white
