@@ -13,7 +13,9 @@
             [sketches.nature-of-code.random-walk-custom-step :as rwc]
             [sketches.nature-of-code.random-walk-dynamic :as rwd]
             [sketches.nature-of-code.random-walk-gaussian :as rwg]
-            [sketches.nature-of-code.random-walk-noise :as rwn]))
+            [sketches.nature-of-code.random-walk-noise :as rwn]
+            [sketches.nature-of-code.car :as c]))
+
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -66,7 +68,8 @@
    [:div
     [:h3.tracked "Vectors"]
     [:div.flex.flex-wrap.justify-start
-     [sketch "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]]]
+     [sketch "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]
+     [sketch "Car" "Exercise 1.5" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise5" c/run]]]
    [:div
     [:h3.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start
