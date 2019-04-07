@@ -20,7 +20,8 @@
             [sketches.nature-of-code.mouse-acceleration :as ma]
             [sketches.inferno :as i]
             [sketches.fire-ball :as fb]
-            [sketches.reverse-roots :as rr]))
+            [sketches.reverse-roots :as rr]
+            [sketches.nature-of-code.force-push :as fp]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -101,7 +102,8 @@
    [:div
     [:h3.tracked "Forces"]
     [:div.flex.flex-wrap.justify-start
-     [sketch "Balloon" "Exercise 2.1" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise1" b/run]]]
+     [sketch "Balloon" "Exercise 2.1" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise1" b/run]
+     [sketch "Force Push" "Exercise 2.3" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise3" fp/run]]]
    [:div
     [:h3.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start
