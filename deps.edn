@@ -1,6 +1,6 @@
 {:deps {com.bhauman/figwheel-main {:mvn/version "0.2.0"}
         com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
         reagent {:mvn/version "0.8.1"}
-        quil {:mvn/version "2.8.0"
+        quil {:mvn/version "3.0.0"
               :exclusions [com.lowagie/itext]}}
  :paths ["src" "target" "resources"]}

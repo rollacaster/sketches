@@ -45,18 +45,16 @@
         (update :particles #(remove is-dead %)))))
 
 (defn setup [host]
-  (fn []
-    (set! (.-globalCompositeOperation (.getContext (.getElementById js/document host) "2d")) "lighter")))
+  (q/blend-mode :add))
 
 (defn draw [host]
-  (fn []
-    (.clearRect (.getContext (.getElementById js/document host) "2d") 0 0 (q/width) (q/height))
-    (q/background 0)
-    (swap! particle-system (comp add-particle add-particle run-particle-system))))
+  (q/clear)
+  (q/background 0)
+  (swap! particle-system (comp add-particle add-particle run-particle-system)))
 
 (defn run [host]
   (q/defsketch particle
     :host host
-    :setup (setup host)
-    :draw (draw host)
+    :setup setup
+    :draw draw
     :size [300 300]))

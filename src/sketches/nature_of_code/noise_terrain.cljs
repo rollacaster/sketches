@@ -4,7 +4,6 @@
 (defn setup []
   (q/stroke 127)
   (q/no-fill)
-  (q/translate (/ (q/width) 2) (/ (q/height) 2))
   (q/rotate-x (/ q/PI 3))
   (q/translate (/ (- (q/width)) 2) (/ (- (q/height)) 2))
   (let [scale 10

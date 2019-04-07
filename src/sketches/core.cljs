@@ -35,9 +35,9 @@
        title
        [:a.link.bb {:href exercise-link :target "_blank"} exercise-title]
        (if (or @isStarted run-immediately)
-         (let [canvas-id (str (random-uuid))]
-           [(with-meta (fn [] [:canvas.w-100.br-100.ba.b--gray {:id canvas-id}])
-              {:component-did-mount #(run-sketch canvas-id)})])
+         (let [id (str (random-uuid))]
+           [(with-meta (fn [] [:div {:id id}])
+              {:component-did-mount #(run-sketch id)})])
          [:div.h-100.w-100.br-100.flex.justify-center.items-center.bg-gray
           [:button.button.bg-transparent.bn.white.pointer {:on-click #(reset! isStarted true)} "▶"]])])))
 

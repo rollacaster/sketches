@@ -27,7 +27,6 @@
                                          (* y -1) y)
                                     :z (if (or (> (:z location) 90) (< (:z location) -125))
                                          (* z -1) z))))]
-    (q/translate (+ 20 (/ (q/width) 2)) 100 -180)
     (q/box 250)
     (q/push-matrix)
     (q/translate (:x location) (:y location) (:z location))
