@@ -17,7 +17,10 @@
             [sketches.nature-of-code.balloon :as b]
             [sketches.nature-of-code.car :as c]
             [sketches.nature-of-code.noise-car :as nc]
-            [sketches.nature-of-code.mouse-acceleration :as ma]))
+            [sketches.nature-of-code.mouse-acceleration :as ma]
+            [sketches.inferno :as i]
+            [sketches.fire-ball :as fb]
+            [sketches.reverse-roots :as rr]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -27,6 +30,19 @@
     [:span.ma0 title]]
    [:div.mb3.f4
     sub-title]])
+
+(defn rac-sketch [title run-sketch run-immediately]
+  (let [isStarted (r/atom false)]
+    (fn []
+      [card
+       title
+       ""
+       (if (or @isStarted run-immediately)
+         (let [id (str (random-uuid))]
+           [(with-meta (fn [] [:div {:id id}])
+              {:component-did-mount #(run-sketch id)})])
+         [:div.h-100.w-100.br-100.flex.justify-center.items-center.bg-gray
+          [:button.button.bg-transparent.bn.white.pointer {:on-click #(reset! isStarted true)} "▶"]])])))
 
 (defn sketch [title exercise-title exercise-link run-sketch run-immediately]
   (let [isStarted (r/atom false)]
@@ -45,6 +61,14 @@
   [:div.mb4
      [:h2 title]
      [:p description]])
+
+(defn rac-sketches []
+  [:<>
+   [:div
+    [:div.flex.flex-wrap.justify-start
+     [rac-sketch "Inferno" i/run]
+     [rac-sketch "Reverse Roots" rr/run]
+     [rac-sketch "Fire Ball" fb/run]]]])
 
 (defn nature-of-code []
   [:<>
@@ -102,6 +126,8 @@
    [:div.mb5
     [:h1 "Sketches by "
      [:a.pointer.bb.link.white {:href "https://twitter.com/rollacaster"} "@rollacaster"]]]
+   [:div.mb5
+    [rac-sketches]]
    [:div.mb5
     [nature-of-code]]
    [:div.mb5
