@@ -122,7 +122,7 @@
     [sketch "03" "Cubic Disarray" "https://generativeartistry.com/tutorials/cubic-disarray/" cd/run]]])
 
 (defn app []
-  [:main.sans-serif.pa4.white
+  [:main.sans-serif.pa4.white.mw9.center
    [:div.mb5
     [:h1 "Sketches by "
      [:a.pointer.bb.link.white {:href "https://twitter.com/rollacaster"} "@rollacaster"]]]
