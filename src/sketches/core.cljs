@@ -21,7 +21,8 @@
             [sketches.inferno :as i]
             [sketches.fire-ball :as fb]
             [sketches.reverse-roots :as rr]
-            [sketches.nature-of-code.force-push :as fp]))
+            [sketches.nature-of-code.force-push :as fp]
+            [sketches.generative-artistry.triangular-mesh :as tm]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -121,7 +122,8 @@
    [:div.flex.flex-wrap.justify-start
     [sketch "01" "Tiled Lines" "https://generativeartistry.com/tutorials/tiled-lines/" tl/run]
     [sketch "02" "Joy Division" "https://generativeartistry.com/tutorials/joy-division/" jd/run]
-    [sketch "03" "Cubic Disarray" "https://generativeartistry.com/tutorials/cubic-disarray/" cd/run]]])
+    [sketch "03" "Cubic Disarray" "https://generativeartistry.com/tutorials/cubic-disarray/" cd/run]
+    [sketch "04" "Triangular Mesh" "https://generativeartistry.com/tutorials/triangular-mesh/" tm/run]]])
 
 (defn app []
   [:main.sans-serif.pa4.white.mw9.center
