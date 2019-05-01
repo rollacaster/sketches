@@ -25,7 +25,8 @@
             [sketches.generative-artistry.triangular-mesh :as tm]
             [sketches.generative-artistry.un-deux-trois :as un]
             [sketches.generative-artistry.circle-packing :as cp]
-            [sketches.generative-artistry.hypnotic-squares :as hs]))
+            [sketches.generative-artistry.hypnotic-squares :as hs]
+            [sketches.generative-artistry.piet-mondarin :as pm]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -129,7 +130,8 @@
     [sketch "04" "Triangular Mesh" "https://generativeartistry.com/tutorials/triangular-mesh/" tm/run]
     [sketch "05" "Un Deux Trois" "https://generativeartistry.com/tutorials/un-deux-trois/" un/run]
     [sketch "06" "Circle Packing" "https://generativeartistry.com/tutorials/circle-packing/" cp/run]
-    [sketch "07" "Hypnotic Squares" "https://generativeartistry.com/tutorials/hypnotic-squares/" hs/run]]])
+    [sketch "07" "Hypnotic Squares" "https://generativeartistry.com/tutorials/hypnotic-squares/" hs/run]
+    [sketch "08" "Piet Mondrian" "https://generativeartistry.com/tutorials/piet-mondrian/" pm/run]]])
 
 (defn app []
   [:main.sans-serif.pa4.white.mw9.center
