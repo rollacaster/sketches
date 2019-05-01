@@ -65,7 +65,8 @@
 
 (defn section [title description]
   [:div.mb4
-     [:h2 title]
+   [:a.link.white {:href (str "#" title)}
+    [:h2 title]]
      [:p description]])
 
 (defn rac-sketches []
@@ -119,7 +120,7 @@
    [section
     "Generative Artistry"
     [:<>
-     "Exercises of "
+     "Tutorials of "
      [:a.pointer.bb.link.white {:href "https://twitter.com/twholman?"} "Tim Holman's"] " "
      [:a.pointer.bb.link.white {:href "https://generativeartistry.com/"} "Generative Artistry"]
      " implemented in ClojureScript."]]
@@ -141,8 +142,8 @@
    [:div.mb5
     [rac-sketches]]
    [:div.mb5
-    [nature-of-code]]
+    [generative-artistry]]
    [:div.mb5
-    [generative-artistry]]])
+    [nature-of-code]]])
 
 (r/render app (.getElementById js/document "app"))
