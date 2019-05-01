@@ -24,7 +24,8 @@
             [sketches.nature-of-code.force-push :as fp]
             [sketches.generative-artistry.triangular-mesh :as tm]
             [sketches.generative-artistry.un-deux-trois :as un]
-            [sketches.generative-artistry.circle-packing :as cp]))
+            [sketches.generative-artistry.circle-packing :as cp]
+            [sketches.generative-artistry.hypnotic-squares :as hs]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -127,7 +128,8 @@
     [sketch "03" "Cubic Disarray" "https://generativeartistry.com/tutorials/cubic-disarray/" cd/run]
     [sketch "04" "Triangular Mesh" "https://generativeartistry.com/tutorials/triangular-mesh/" tm/run]
     [sketch "05" "Un Deux Trois" "https://generativeartistry.com/tutorials/un-deux-trois/" un/run]
-    [sketch "06" "Circle Packing" "https://generativeartistry.com/tutorials/circle-packing/" cp/run]]])
+    [sketch "06" "Circle Packing" "https://generativeartistry.com/tutorials/circle-packing/" cp/run]
+    [sketch "07" "Hypnotic Squares" "https://generativeartistry.com/tutorials/hypnotic-squares/" hs/run]]])
 
 (defn app []
   [:main.sans-serif.pa4.white.mw9.center
