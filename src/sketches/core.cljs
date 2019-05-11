@@ -18,6 +18,7 @@
             [sketches.nature-of-code.car :as c]
             [sketches.nature-of-code.noise-car :as nc]
             [sketches.nature-of-code.mouse-acceleration :as ma]
+            [sketches.nature-of-code.frictions :as fr]
             [sketches.inferno :as i]
             [sketches.fire-ball :as fb]
             [sketches.reverse-roots :as rr]
@@ -47,7 +48,7 @@
          (let [id (str (random-uuid))]
            [(with-meta (fn [] [:div {:id id}])
               {:component-did-mount #(run-sketch id)})])
-         [:div.h-100.w-100.br-100.flex.justify-center.items-center.bg-gray
+         [:div.h-100.w-100.flex.justify-center.items-center.bg-gray
           [:button.button.bg-transparent.bn.white.pointer {:on-click #(reset! isStarted true)} "▶"]])])))
 
 (defn sketch [title exercise-title exercise-link run-sketch run-immediately]
@@ -60,7 +61,7 @@
          (let [id (str (random-uuid))]
            [(with-meta (fn [] [:div {:id id}])
               {:component-did-mount #(run-sketch id)})])
-         [:div.h-100.w-100.br-100.flex.justify-center.items-center.bg-gray
+         [:div.h-100.w-100.flex.justify-center.items-center.bg-gray
           [:button.button.bg-transparent.bn.white.pointer {:on-click #(reset! isStarted true)} "▶"]])])))
 
 (defn section [title description]
@@ -109,7 +110,8 @@
     [:h3.tracked "Forces"]
     [:div.flex.flex-wrap.justify-start
      [sketch "Balloon" "Exercise 2.1" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise1" b/run]
-     [sketch "Force Push" "Exercise 2.3" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise3" fp/run]]]
+     [sketch "Force Push" "Exercise 2.3" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise3" fp/run]
+     [sketch "Frictions" "Exercise 2.4" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise4" fr/run]]]
    [:div
     [:h3.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start
