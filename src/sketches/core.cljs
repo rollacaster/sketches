@@ -19,6 +19,7 @@
             [sketches.nature-of-code.noise-car :as nc]
             [sketches.nature-of-code.mouse-acceleration :as ma]
             [sketches.nature-of-code.frictions :as fr]
+            [sketches.nature-of-code.fluid :as fl]
             [sketches.inferno :as i]
             [sketches.fire-ball :as fb]
             [sketches.reverse-roots :as rr]
@@ -111,7 +112,8 @@
     [:div.flex.flex-wrap.justify-start
      [sketch "Balloon" "Exercise 2.1" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise1" b/run]
      [sketch "Force Push" "Exercise 2.3" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise3" fp/run]
-     [sketch "Frictions" "Exercise 2.4" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise4" fr/run]]]
+     [sketch "Frictions" "Exercise 2.4" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise4" fr/run]
+     [sketch "Fluid" "Exercise 2.5" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise5" fl/run]]]
    [:div
     [:h3.tracked "Particle Systems"]
     [:div.flex.flex-wrap.justify-start

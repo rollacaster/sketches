@@ -13,13 +13,15 @@
         (assoc :velocity velocity)
         (assoc :accleration [0 0]))))
 
-(defn keep-inside [{[x y] :location}]
-  [(cond (> x (q/width)) 0
-         (< x 0) (q/width)
-         :else x)
-   (cond (> y (q/height)) 0
-         (< y 0) (q/height)
-         :else y)])
+(defn keep-inside [mover]
+  (update mover :location
+          (fn [[x y]]
+            [(cond (> x (q/width)) (q/width)
+                   (< x 0) 0
+                   :else x)
+             (cond (> y (q/height)) (q/height)
+                   (< y 0) 0
+                   :else y)])))
 
 (defn bounce-inside [{[x y] :location [vx vy] :velocity :as mover}]
   (assoc mover :velocity
