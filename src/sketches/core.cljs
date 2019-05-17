@@ -21,6 +21,7 @@
             [sketches.nature-of-code.frictions :as fr]
             [sketches.nature-of-code.fluid :as fl]
             [sketches.inferno :as i]
+            [sketches.fire-texture :as ft]
             [sketches.fire-ball :as fb]
             [sketches.reverse-roots :as rr]
             [sketches.nature-of-code.force-push :as fp]
@@ -77,7 +78,8 @@
     [:div.flex.flex-wrap.justify-start
      [rac-sketch "Inferno" i/run]
      [rac-sketch "Reverse Roots" rr/run]
-     [rac-sketch "Fire Ball" fb/run]]]])
+     [rac-sketch "Fire Ball" fb/run]
+     [rac-sketch "Fire Texture" ft/run]]]])
 
 (defn nature-of-code []
   [:<>
