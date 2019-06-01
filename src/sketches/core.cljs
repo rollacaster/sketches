@@ -22,6 +22,7 @@
             [sketches.nature-of-code.fluid :as fl]
             [sketches.nature-of-code.surface-area :as sa]
             [sketches.inferno :as i]
+            [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
             [sketches.fire-ball :as fb]
             [sketches.reverse-roots :as rr]
@@ -77,6 +78,7 @@
   [:<>
    [:div
     [:div.flex.flex-wrap.justify-start
+     [rac-sketch "Rotating Angles" ra/run]
      [rac-sketch "Inferno" i/run]
      [rac-sketch "Reverse Roots" rr/run]
      [rac-sketch "Fire Ball" fb/run]
