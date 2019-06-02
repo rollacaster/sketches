@@ -81,11 +81,11 @@
         (let [id (str (random-uuid))]
           [(with-meta (fn [] [:div.flex.flex-column.items-center
                               [:div.w5.h5.mt4.mh4.mb3 {:id id}]
-                              [:div.flex
-                               [:button.pointer.bn.h1
+                              [:div.flex.h1
+                               [:button.pointer.bn.bg-transparent
                                 {:on-click #(do (stop-sketch id) (run-sketch id))}
                                 (reload-icon)]
-                               [:button.pointer.bn.h1
+                               [:button.pointer.bn.bg-transparent
                                 {:on-click #(do
                                               (stop-sketch id)
                                               (reset! is-started false))}
@@ -112,15 +112,19 @@
      [sketch run-sketch run-immediately]]))
 
 (defn section [title description]
-  [:div.mb4
+  [:div.mb4.tc.tl-ns
    [:a.link.white {:href (str "#" title)}
     [:h2 title]]
      [:p description]])
 
+(defn cards-container [& children]
+  [:div.flex.flex-wrap.justify-center.justify-start-ns
+   children])
+
 (defn rac-cards []
   [:<>
    [:div
-    [:div.flex.flex-wrap.justify-start
+    [cards-container
      [rac-card "Inferno" i/run]
      [rac-card "Reverse Roots" rr/run]
      [rac-card "Fire Ball" fb/run]
@@ -137,8 +141,8 @@
      [:a.pointer.bb.link.white {:href "https://natureofcode.com/"} "Nature of Code"]
      " implemented in ClojureScript."]]
    [:div
-    [:h3.tracked "Introduction"]
-    [:div.flex.flex-wrap.justify-start
+    [:h3.tracked.tc.tl-ns "Introduction"]
+    [cards-container
      [exercise-card "Random Walk" "Exercise I.1" "https://natureofcode.com/book/introduction/#exercise-i1" rw/run]
      [exercise-card "Random Walk II" "Exercise I.3" "https://natureofcode.com/book/introduction/#exercise-i3" rwd/run]
      [exercise-card "Paint Splatter" "Exercise I.4" "https://natureofcode.com/book/introduction/#exercise-i4" p/run]
@@ -149,15 +153,15 @@
      [exercise-card "Noise Animate" "Exercise I.9" "https://natureofcode.com/book/introduction/#exercise-i9" na/run]
      [exercise-card "Noise Terrain" "Exercise I.10" "https://natureofcode.com/book/introduction/#exercise-i10" nt/run]]]
    [:div
-    [:h3.tracked "Vectors"]
-    [:div.flex.flex-wrap.justify-start
+    [:h3.tracked.tc.tl-ns "Vectors"]
+    [cards-container
      [exercise-card "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]
      [exercise-card "Car" "Exercise 1.5" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise5" c/run]
      [exercise-card "Noise Car" "Exercise 1.6" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise6" nc/run]
      [exercise-card "Mouse Acceleration" "Exercise 1.8" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise8" ma/run]]]
    [:div
-    [:h3.tracked "Forces"]
-    [:div.flex.flex-wrap.justify-start
+    [:h3.tracked.tc.tl-ns "Forces"]
+    [cards-container
      [exercise-card "Balloon" "Exercise 2.1" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise1" b/run]
      [exercise-card "Force Push" "Exercise 2.3" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise3" fp/run]
      [exercise-card "Frictions" "Exercise 2.4" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise4" fr/run]
@@ -166,8 +170,8 @@
      ;; Fluid resistance does not only work opposite to the velocity vector, but also perpendicular to it. This is known as “lift-induced drag” and will cause an airplane with an angled wing to rise in altitude. Try creating a simulation of lift.
      #_[exercise-card "Lift-induced Drag" "Exercise 2.7" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise7" ld/run true]]]
    [:div
-    [:h3.tracked "Particle Systems"]
-    [:div.flex.flex-wrap.justify-start
+    [:h3.tracked.tc.tl-ns "Particle Systems"]
+    [cards-container
      [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]])
 
 (defn generative-artistry []
@@ -179,7 +183,7 @@
      [:a.pointer.bb.link.white {:href "https://twitter.com/twholman?"} "Tim Holman's"] " "
      [:a.pointer.bb.link.white {:href "https://generativeartistry.com/"} "Generative Artistry"]
      " implemented in ClojureScript."]]
-   [:div.flex.flex-wrap.justify-start
+   [cards-container
     [exercise-card "01" "Tiled Lines" "https://generativeartistry.com/tutorials/tiled-lines/" tl/run]
     [exercise-card "02" "Joy Division" "https://generativeartistry.com/tutorials/joy-division/" jd/run]
     [exercise-card "03" "Cubic Disarray" "https://generativeartistry.com/tutorials/cubic-disarray/" cd/run]
@@ -191,7 +195,7 @@
 
 (defn app []
   [:main.sans-serif.pa4.white.mw9.center
-   [:div.mb5
+   [:div.mb5.tc.tl-ns
     [:h1 "Sketches by "
      [:a.pointer.bb.link.white {:href "https://twitter.com/rollacaster"} "@rollacaster"]]]
    [:div.mb5
