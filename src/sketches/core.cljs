@@ -28,6 +28,7 @@
             [sketches.fire-texture :as ft]
             [sketches.fire-ball :as fb]
             [sketches.reverse-roots :as rr]
+            [sketches.flowers :as flo]
             [sketches.nature-of-code.force-push :as fp]
             [sketches.generative-artistry.triangular-mesh :as tm]
             [sketches.generative-artistry.un-deux-trois :as un]
@@ -100,6 +101,7 @@
   [:<>
    [:div
     [cards-container
+     [rac-card "Flower" flo/run]
      [rac-card "Inferno" i/run]
      [rac-card "Reverse Roots" rr/run]
      [rac-card "Fire Ball" fb/run]
