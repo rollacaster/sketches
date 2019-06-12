@@ -24,6 +24,7 @@
             [sketches.nature-of-code.surface-area :as sa]
             [sketches.nature-of-code.lift-induced-drag :as ld]
             [sketches.nature-of-code.invisible-attractors :as ia]
+            [sketches.nature-of-code.own-force :as of]
             [sketches.inferno :as i]
             [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
@@ -102,11 +103,11 @@
   [:<>
    [:div
     [cards-container
-     [rac-card "Flower" flo/run]
      [rac-card "Inferno" i/run]
      [rac-card "Reverse Roots" rr/run]
      [rac-card "Fire Ball" fb/run]
      [rac-card "Fire Texture" ft/run]
+     [rac-card "Flower" flo/run]
      [rac-card "Oscillating Angles" ra/run ]]]])
 
 (defn nature-of-code []
@@ -147,7 +148,8 @@
      [exercise-card "Surface Area" "Exercise 2.6" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise6" sa/run]
      ;; Fluid resistance does not only work opposite to the velocity vector, but also perpendicular to it. This is known as “lift-induced drag” and will cause an airplane with an angled wing to rise in altitude. Try creating a simulation of lift.
      #_[exercise-card "Lift-induced Drag" "Exercise 2.7" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise7" ld/run true]
-     [exercise-card "Invisible Attractors" "Exercise 2.8" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise8" ia/run]]]
+     [exercise-card "Invisible Attractors" "Exercise 2.8" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise8" ia/run]
+     [exercise-card "Own Force" "Exercise 2.9" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise9" of/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
