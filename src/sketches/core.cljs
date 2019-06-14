@@ -27,6 +27,7 @@
             [sketches.nature-of-code.own-force :as of]
             [sketches.nature-of-code.repulse-mouse :as rm]
             [sketches.nature-of-code.rotate-baton :as rb]
+            [sketches.nature-of-code.cannon :as cn]
             [sketches.inferno :as i]
             [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
@@ -156,7 +157,8 @@
    [:div
     [:h3.tracked.tc.tl-ns "Oscillation"]
     [cards-container
-     [exercise-card "Rotate baton" "Exercise 3.1" "https://natureofcode.com/book/chapter-3-#chapter03_exercise1" rb/run]]]
+     [exercise-card "Rotate baton" "Exercise 3.1" "https://natureofcode.com/book/chapter-3-#chapter03_exercise1" rb/run]
+     [exercise-card "Cannon" "Exercise 3.2" "https://natureofcode.com/book/chapter-3-#chapter03_exercise2" cn/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
