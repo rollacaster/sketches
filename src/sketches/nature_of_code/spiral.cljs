@@ -1,25 +1,29 @@
 (ns sketches.nature-of-code.spiral
   (:require [quil.core :as q :include-macros true]
-            [sketches.nature-of-code.vector :as v]))
+            [quil.middleware :as md]))
 
-(def delta (atom 0))
+(defn setup []
+  (q/background 255)
+  {:radius 0
+   :theta 0})
 
-(defn draw [host]
-  (fn []
-    (.clearRect (.getContext (.getElementById js/document host) "2d") 0 0 (q/width) (q/height))
-    (q/stroke 0)
-    (q/push-matrix)
-    (q/translate 150 150)
-    (q/rotate (mod (swap! delta + 0.01) q/TWO-PI))
-    (q/begin-shape)
-    (doseq [x (range 1000)]
-      (q/vertex (* (q/cos x) x)
-                (* (q/sin x) x)))
-    (q/end-shape)
-    (q/pop-matrix)))
+(defn draw [{:keys [radius theta]}]
+  (q/no-stroke)
+  (q/fill 0)
+  (let [x (* radius (q/cos theta))
+        y (* radius (q/sin theta))]
+    (q/ellipse (+ x (/ (q/width) 2)) (+ y (/ (q/height) 2)) 16 16)))
 
-(defn run-spiral [host]
-  (q/defsketch particle
+(defn update-state [state]
+  (-> state
+      (update :theta + 0.05)
+      (update :radius + 0.2)))
+
+(defn run [host]
+  (q/defsketch spiral
     :host host
-    :draw (draw host)
+    :setup setup
+    :draw draw
+    :update update-state
+    :middleware [md/fun-mode]
     :size [300 300]))

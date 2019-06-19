@@ -29,6 +29,7 @@
             [sketches.nature-of-code.rotate-baton :as rb]
             [sketches.nature-of-code.cannon :as cn]
             [sketches.nature-of-code.vehicle :as ve]
+            [sketches.nature-of-code.spiral :as sp]
             [sketches.inferno :as i]
             [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
@@ -160,7 +161,8 @@
     [cards-container
      [exercise-card "Rotate baton" "Exercise 3.1" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise1" rb/run]
      [exercise-card "Cannon" "Exercise 3.2" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise2" cn/run]
-     [exercise-card "Vehicle" "Exercise 3.3" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise3" ve/run]]]
+     [exercise-card "Vehicle" "Exercise 3.3" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise3" ve/run]
+     [exercise-card "Spiral" "Exercise 3.4" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise4" sp/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
