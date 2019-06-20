@@ -37,6 +37,7 @@
             [sketches.fire-ball :as fb]
             [sketches.reverse-roots :as rr]
             [sketches.flowers :as flo]
+            [sketches.rainbow-circles :as rc]
             [sketches.nature-of-code.force-push :as fp]
             [sketches.generative-artistry.triangular-mesh :as tm]
             [sketches.generative-artistry.un-deux-trois :as un]
@@ -114,6 +115,7 @@
      [rac-card "Fire Ball" fb/run]
      [rac-card "Fire Texture" ft/run]
      [rac-card "Flower" flo/run]
+     [rac-card "Rainbow Circles" rc/run]
      [rac-card "Oscillating Angles" ra/run ]]]])
 
 (defn nature-of-code []
