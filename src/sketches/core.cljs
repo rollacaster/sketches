@@ -31,6 +31,7 @@
             [sketches.nature-of-code.vehicle :as ve]
             [sketches.nature-of-code.spiral :as sp]
             [sketches.nature-of-code.asteroids :as as]
+            [sketches.nature-of-code.bob :as bo]
             [sketches.inferno :as i]
             [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
@@ -166,7 +167,8 @@
      [exercise-card "Cannon" "Exercise 3.2" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise2" cn/run]
      [exercise-card "Vehicle" "Exercise 3.3" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise3" ve/run]
      [exercise-card "Spiral" "Exercise 3.4" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise4" sp/run]
-     [exercise-card "Asteroids" "Exercise 3.5" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise5" as/run]]]
+     [exercise-card "Asteroids" "Exercise 3.5" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise5" as/run]
+     [exercise-card "Bob" "Exercise 3.6" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise6" bo/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
