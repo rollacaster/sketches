@@ -36,6 +36,7 @@
             [sketches.nature-of-code.angular-oscilliate :as ao]
             [sketches.nature-of-code.perlin-wave :as pw]
             [sketches.nature-of-code.custom-waves :as cw]
+            [sketches.nature-of-code.combined-wave :as co]
             [sketches.inferno :as i]
             [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
@@ -176,7 +177,8 @@
      [exercise-card "Insect" "Exercise 3.7" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise7" in/run]
      [exercise-card "Angular Oscilliate" "Exercise 3.8" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise8" ao/run]
      [exercise-card "Perlin Wave" "Exercise 3.9" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise9" pw/run]
-     [exercise-card "Custom Waves" "Exercise 3.10" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise10" cw/run]]]
+     [exercise-card "Custom Waves" "Exercise 3.10" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise10" cw/run]
+     [exercise-card "Combined Wave" "Exercise 3.11" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise11" co/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
