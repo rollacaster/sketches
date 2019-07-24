@@ -37,6 +37,7 @@
             [sketches.nature-of-code.perlin-wave :as pw]
             [sketches.nature-of-code.custom-waves :as cw]
             [sketches.nature-of-code.combined-wave :as co]
+            [sketches.nature-of-code.random-cellular-automaton :as rca]
             [sketches.inferno :as i]
             [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
@@ -182,7 +183,11 @@
    [:div
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
-     [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]])
+     [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Cellular Automata"]
+    [cards-container
+     [exercise-card "Random CA" "Exercise 7.1" "https://natureofcode.com/book/chapter-7-cellular-automata/#chapter07_exercise1" rca/run]]]])
 
 (defn generative-artistry []
   [:<>
