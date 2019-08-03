@@ -30,6 +30,7 @@
             [sketches.nature-of-code.cannon :as cn]
             [sketches.nature-of-code.vehicle :as ve]
             [sketches.nature-of-code.spiral :as sp]
+            [sketches.heart-of-clojure :as hc]
             [sketches.nature-of-code.asteroids :as as]
             [sketches.nature-of-code.bob :as bo]
             [sketches.nature-of-code.insect :as in]
@@ -117,6 +118,7 @@
   [:<>
    [:div
     [cards-container
+     [rac-card "Heart of Clojure" hc/run]
      [rac-card "Inferno" i/run]
      [rac-card "Reverse Roots" rr/run]
      [rac-card "Fire Ball" fb/run]
