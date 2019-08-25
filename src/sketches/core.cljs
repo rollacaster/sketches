@@ -53,6 +53,7 @@
             [sketches.generative-artistry.circle-packing :as cp]
             [sketches.generative-artistry.hypnotic-squares :as hs]
             [sketches.generative-artistry.piet-mondarin :as pm]
+            [sketches.creative-coding.print-art :as pa]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]))
 
 (defn card [title sub-title children]
@@ -212,6 +213,18 @@
     [exercise-card "07" "Hypnotic Squares" "https://generativeartistry.com/tutorials/hypnotic-squares/" hs/run]
     [exercise-card "08" "Piet Mondrian" "https://generativeartistry.com/tutorials/piet-mondrian/" pm/run]]])
 
+(defn creative-coding []
+  [:<>
+   [section
+    "Creative Coding with Canvas & WebGL"
+    [:<>
+     "Sketches of "
+     [:a.pointer.bb.link.white {:href "https://twitter.com/mattdesl"} "Matt DesLauriers'"] " "
+     [:a.pointer.bb.link.white {:href "https://frontendmasters.com/courses/canvas-webgl/"} "Creative Coding with Canvas & WebGL"]
+     " implemented in ClojureScript."]]
+   [cards-container
+    [exercise-card "01" "Print Art with Canvas" "https://frontendmasters.com/courses/canvas-webgl/" pa/run]]])
+
 (defn app []
   [:main.sans-serif.pa4.white.mw9.center
    [:div.mb5.tc.tl-ns
@@ -219,6 +232,8 @@
      [:a.pointer.bb.link.white {:href "https://twitter.com/rollacaster"} "@rollacaster"]]]
    [:div.mb5
     [rac-cards]]
+   [:div.mb5
+    [creative-coding]]
    [:div.mb5
     [generative-artistry]]
    [:div.mb5
