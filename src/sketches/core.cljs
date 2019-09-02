@@ -40,6 +40,9 @@
             [sketches.nature-of-code.custom-waves :as cw]
             [sketches.nature-of-code.combined-wave :as co]
             [sketches.nature-of-code.random-cellular-automaton :as rca]
+            [sketches.nature-of-code.game-of-life :as gl]
+            [sketches.nature-of-code.koch-curve :as kc]
+            [sketches.nature-of-code.own-cantor :as oc]
             [sketches.inferno :as i]
             [sketches.rotating-angles :as ra]
             [sketches.fire-texture :as ft]
@@ -192,7 +195,13 @@
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
     [cards-container
-     [exercise-card "Random CA" "Exercise 7.1" "https://natureofcode.com/book/chapter-7-cellular-automata/#chapter07_exercise1" rca/run]]]])
+     [exercise-card "Random CA" "Exercise 7.1" "https://natureofcode.com/book/chapter-7-cellular-automata/#chapter07_exercise1" rca/run]
+     [exercise-card "Game of Life" "Exercise 7.6" "https://natureofcode.com/book/chapter-7-cellular-automata/#chapter07_exercise6" gl/run]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Fractals"]
+    [cards-container
+     [exercise-card "Own Cantor" "Exercise 8.1" "https://natureofcode.com/book/chapter-8-fractals/#chapter08_exercise1" oc/run]
+     [exercise-card "Koch Curve" "Exercise 8.2" "https://natureofcode.com/book/chapter-8-fractals/#chapter08_exercise2" kc/run]]]])
 
 (defn generative-artistry []
   [:<>

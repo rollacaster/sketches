@@ -27,3 +27,7 @@
   (if (> (mag [x y]) top)
     (mult (normalize [x y]) top)
     [x y]))
+
+(defn rotate [[x y] angle]
+  [(- (* (Math/cos angle) x) (* (Math/sin angle) y))
+   (+ (* (Math/sin angle) x) (* (Math/cos angle) y))])
