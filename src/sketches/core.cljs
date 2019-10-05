@@ -58,6 +58,7 @@
             [sketches.generative-artistry.hypnotic-squares :as hs]
             [sketches.generative-artistry.piet-mondarin :as pm]
             [sketches.creative-coding.print-art :as pa]
+            [sketches.creative-coding.webgl :as wg]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]))
 
 (defn card [title sub-title children]
@@ -235,7 +236,8 @@
      [:a.pointer.bb.link.white {:href "https://frontendmasters.com/courses/canvas-webgl/"} "Creative Coding with Canvas & WebGL"]
      " implemented in ClojureScript."]]
    [cards-container
-    ^{:key "Print Art with Canvas"} [exercise-card "01" "Print Art with Canvas" "https://frontendmasters.com/courses/canvas-webgl/" pa/run]]])
+    ^{:key "Print Art with Canvas"} [exercise-card "01" "Print Art with Canvas" "https://frontendmasters.com/courses/canvas-webgl/" pa/run]
+    ^{:key "WebGL"} [exercise-card "02" "WebGL" "https://frontendmasters.com/courses/canvas-webgl/" wg/run]]])
 
 (defn app []
   [:main.sans-serif.pa4.white.mw9.center

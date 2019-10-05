@@ -9,11 +9,17 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Install
+    - name: Clojure install
       run: |
         curl -O https://download.clojure.org/install/linux-install-1.10.1.469.sh
         chmod +x linux-install-1.10.1.469.sh
         sudo ./linux-install-1.10.1.469.sh
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+    - name: npm install
+      run: npm install
+    - name: Build js
+      run: npx webpack
     - name: Build
       run: |
         clojure -m figwheel.main -O advanced -bo dev
