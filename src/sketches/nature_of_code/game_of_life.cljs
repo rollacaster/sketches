@@ -39,6 +39,10 @@
                    (and (= current 0) (= neighbour-count 3)) 1
                    :else current)))))))
 
+(defn update-board [x y board]
+  (map sequence
+       (assoc-in (into [] (map #(into [] %) board)) [x y] 1)))
+
 (defn draw [{:keys [board]}]
   (let [updated-board
         (if (q/mouse-pressed?)
@@ -51,10 +55,6 @@
           (q/fill 0)
           (q/fill 255))
         (q/rect (* x 5) (* y 5) 5 5)))))
-
-(defn update-board [x y board]
-  (map sequence
-       (assoc-in (into [] (map #(into [] %) board)) [x y] 1)))
 
 (defn mouse-clicked [{:keys [board] :as state} {:keys [x y]}]
   (update state :board (fn [board] (update-board (q/floor (/ x 5)) (q/floor (/ y 5)) board))))
