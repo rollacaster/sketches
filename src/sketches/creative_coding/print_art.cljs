@@ -1,11 +1,24 @@
 (ns sketches.creative-coding.print-art
   (:require [quil.core :as q :include-macros true]
-            [quil.middleware :as md]))
+            [quil.middleware :as md]
+            [nice-color-palettes]))
+
+(def palettes (js->clj nice-color-palettes))
+
+(defn pick-random [list]
+  (nth list (rand-int (- (count list) 1))))
+
+(defn pick-random-palette []
+  (map
+   #(map (fn [s] (q/unhex (apply str s)))
+         (partition 2 (rest %)))
+   (pick-random palettes)))
+
 
 (defn setup []
   (let [grid 40
         font "Helvetica"
-        palette [[55 59 85] [222 225 182] [115 200 169]]
+        palette (pick-random-palette)
         points (for [x (range grid)
                      y (range grid)]
                  (let [u (/ x (- grid 1))

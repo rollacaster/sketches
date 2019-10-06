@@ -4,15 +4,16 @@
             [nice-color-palettes]
             [bezier-easing]))
 
-
-
 (def palettes (js->clj nice-color-palettes))
 
 (defn pick-random [list]
   (nth list (rand-int (- (count list) 1))))
 
 (defn pick-random-palette []
-  (pick-random palettes))
+  (map
+   #(map (fn [s] (q/unhex (apply str s)))
+         (partition 2 (rest %)))
+   (pick-random palettes)))
 
 (defn draw [{:keys [rotation boxes]}]
   (q/clear)
@@ -41,7 +42,7 @@
   (let [palette (pick-random-palette)]
     {:boxes (map
              (fn [i]
-               (let [color (map (fn [s] (q/unhex (apply str s))) (partition 2 (rest (pick-random (take (q/random 1 (- (count palette) 1)) palette)))))]
+               (let [color (pick-random palette)]
                  {:scale [(q/random -1 1) (q/random -1 1) (q/random -1 1)]
                   :position [(q/random 0 (q/width))
                              (q/random 0 (q/height))
