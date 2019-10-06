@@ -1,7 +1,7 @@
 (ns sketches.core
   (:require [reagent.core :as r]
             [quil.core :as q]
-            [sketches.no-453 :as n453]
+            [sketches.noise-colors :as noc]
             [sketches.generative-artistry.tiled-lines :as tl]
             [sketches.generative-artistry.joy-division :as jd]
             [sketches.generative-artistry.cubic-disarray :as cd]
@@ -126,7 +126,7 @@
    [:div
     [cards-container
      #_[rac-card "Margarete Fountain" mf/run true]
-     ^{:key "No. 453"} [rac-card "No. 453" n453/run]
+     ^{:key "Noise Colors"} [rac-card "Noise Colors" noc/run]
      ^{:key "Heart of Clojure"} [rac-card "Heart of Clojure" hc/run]
      ^{:key "Inferno"} [rac-card "Inferno" i/run]
      ^{:key "Reverse Roots"} [rac-card "Reverse Roots" rr/run]
