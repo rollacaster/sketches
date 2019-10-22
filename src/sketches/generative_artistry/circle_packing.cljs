@@ -12,14 +12,6 @@
        (>= a (Math/sqrt (+ (* x x) (* y y))))))
    circles))
 
-(does-circle-have-a-collision 
- '({:x 132
-   :y 132
-   :radius 100})
- {:x 170
-   :y 170
-   :radius 10})
-
 (defn create-circle []
   {:x (q/random (q/width))
    :y (q/random (q/height))
