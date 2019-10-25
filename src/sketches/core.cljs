@@ -39,6 +39,7 @@
             [sketches.nature-of-code.perlin-wave :as pw]
             [sketches.nature-of-code.custom-waves :as cw]
             [sketches.nature-of-code.combined-wave :as co]
+            [sketches.nature-of-code.multi-pendulum :as mp]
             [sketches.nature-of-code.random-cellular-automaton :as rca]
             [sketches.nature-of-code.game-of-life :as gl]
             [sketches.nature-of-code.koch-curve :as kc]
@@ -190,7 +191,8 @@
      ^{:key "Angular Oscilliate"} [exercise-card "Angular Oscilliate" "Exercise 3.8" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise8" ao/run]
      ^{:key "Perlin Wave"} [exercise-card "Perlin Wave" "Exercise 3.9" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise9" pw/run]
      ^{:key "Custom Waves"} [exercise-card "Custom Waves" "Exercise 3.10" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise10" cw/run]
-     ^{:key "Combined Wave"} [exercise-card "Combined Wave" "Exercise 3.11" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise11" co/run]]]
+     ^{:key "Combined Wave"} [exercise-card "Combined Wave" "Exercise 3.11" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise11" co/run]
+     ^{:key "Multi Pendulum"} [exercise-card "Multi Pendulum" "Exercise 3.12" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise12" mp/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
