@@ -42,6 +42,7 @@
             [sketches.nature-of-code.multi-pendulum :as mp]
             [sketches.nature-of-code.multi-springs :as ms]
             [sketches.nature-of-code.particle-force :as pf]
+            [sketches.nature-of-code.rotating-particle :as rp]
             [sketches.nature-of-code.random-cellular-automaton :as rca]
             [sketches.nature-of-code.game-of-life :as gl]
             [sketches.nature-of-code.koch-curve :as kc]
@@ -200,6 +201,7 @@
     [:h3.tracked.tc.tl-ns "Particle Systems"]
     [cards-container
      ^{:key "Particle Force"} [exercise-card "Particle Force" "Exercise 4.1" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise1" pf/run]
+     ^{:key "Rotating Particle"} [exercise-card "Rotating Particle" "Exercise 4.2" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise2" rp/run]
      ^{:key "Fire"} [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
