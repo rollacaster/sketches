@@ -56,6 +56,7 @@
             [sketches.reverse-roots :as rr]
             [sketches.flowers :as flo]
             [sketches.rainbow-circles :as rc]
+            [sketches.particle-party :as pp]
             [sketches.nature-of-code.force-push :as fp]
             [sketches.generative-artistry.triangular-mesh :as tm]
             [sketches.generative-artistry.un-deux-trois :as un]
@@ -139,7 +140,8 @@
      ^{:key "Fire Texture"} [rac-card "Fire Texture" ft/run]
      ^{:key "Flower"} [rac-card "Flower" flo/run]
      ^{:key "Rainbow Circles"} [rac-card "Rainbow Circles" rc/run]
-     ^{:key "Oscillating Angles"} [rac-card "Oscillating Angles" ra/run ]]]])
+     ^{:key "Oscillating Angles"} [rac-card "Oscillating Angles" ra/run ]
+     ^{:key "Particle Party"} [rac-card "Particle Party" pp/run]]]])
 
 (defn nature-of-code []
   [:<>
