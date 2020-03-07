@@ -35,6 +35,7 @@
             [sketches.heart-of-clojure :as hc]
             [sketches.nature-of-code.asteroids :as as]
             [sketches.nature-of-code.asteroids-with-particles :as ap]
+            [sketches.nature-of-code.particles-on-click :as ac]
             [sketches.nature-of-code.bob :as bo]
             [sketches.nature-of-code.insect :as in]
             [sketches.nature-of-code.angular-oscilliate :as ao]
@@ -209,6 +210,7 @@
      ^{:key "Rotating Particle"} [exercise-card "Rotating Particle" "Exercise 4.2" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise2" rp/run]
      ^{:key "Dynamic Origin"} [exercise-card "Dynamic Origin" "Exercise 4.3" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise3" do/run]
      ^{:key "Asteroids with Particles"} [exercise-card "Asteroids with Particles" "Exercise 4.4" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise4" ap/run]
+     ^{:key "Particles on Click"} [exercise-card "Particles on Click" "Exercise 4.5" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise5" ac/run]
      ^{:key "Fire"} [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
