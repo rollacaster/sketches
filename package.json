@@ -4,6 +4,7 @@
   "description": "Various sketches I create to learn more about create visual programming.",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,6 @@
   },
   "devDependencies": {
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.11"
   }
 }

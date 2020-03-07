@@ -1,5 +1,6 @@
 (ns sketches.core
   (:require [reagent.core :as r]
+            [reagent.dom :as dom]
             [quil.core :as q]
             [sketches.noise-colors :as noc]
             [sketches.generative-artistry.tiled-lines :as tl]
@@ -265,4 +266,4 @@
    [:div.mb5
     [nature-of-code]]])
 
-(r/render app (.getElementById js/document "app"))
+(dom/render app (.getElementById js/document "app"))
