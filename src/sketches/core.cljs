@@ -24,7 +24,7 @@
             [sketches.nature-of-code.frictions :as fr]
             [sketches.nature-of-code.fluid :as fl]
             [sketches.nature-of-code.surface-area :as sa]
-            [sketches.nature-of-code.lift-induced-drag :as ld]
+            #_[sketches.nature-of-code.lift-induced-drag :as ld]
             [sketches.nature-of-code.invisible-attractors :as ia]
             [sketches.nature-of-code.own-force :as of]
             [sketches.nature-of-code.repulse-mouse :as rm]
