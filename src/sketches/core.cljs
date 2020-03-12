@@ -47,6 +47,7 @@
             [sketches.nature-of-code.multi-springs :as ms]
             [sketches.nature-of-code.particle-force :as pf]
             [sketches.nature-of-code.rotating-particle :as rp]
+            [sketches.nature-of-code.mixed-particles :as mip]
             [sketches.nature-of-code.dynamic-origin :as do]
             [sketches.nature-of-code.random-cellular-automaton :as rca]
             [sketches.nature-of-code.game-of-life :as gl]
@@ -213,6 +214,7 @@
      ^{:key "Asteroids with Particles"} [exercise-card "Asteroids with Particles" "Exercise 4.4" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise4" ap/run]
      ^{:key "Particles on Click"} [exercise-card "Particles on Click" "Exercise 4.5" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise5" ac/run]
      ^{:key "Shutter in Pieces"} [exercise-card "Shutter in Pieces" "Exercise 4.6" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise6" sip/run]
+     ^{:key "Mixed Particles"} [exercise-card "Mixed Particles" "Exercise 4.8" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise8" mip/run]
      ^{:key "Fire"} [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
