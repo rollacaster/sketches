@@ -9,6 +9,7 @@
             [sketches.nature-of-code.bouncing-ball :as bb]
             [sketches.nature-of-code.fire :as f]
             [sketches.nature-of-code.fire-rainbow :as rf]
+            [sketches.nature-of-code.fire-blend :as rib]
             [sketches.nature-of-code.noise-animate :as na]
             [sketches.nature-of-code.noise-detail :as nd]
             [sketches.nature-of-code.noise-terrain :as nt]
@@ -223,7 +224,8 @@
      ^{:key "Particles repel"} [exercise-card "Particles repel" "Exercise 4.10" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise10" prs/run]
      ^{:key "Fire"} [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]
      ^{:key "Particle with Images"} [exercise-card "Particle with Images" "Exercise 4.12" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise12" pi/run]
-     ^{:key "Rainbow Fire"} [exercise-card "Rainbow Fire" "Exercise 4.13" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise13" rf/run]]]
+     ^{:key "Rainbow Fire"} [exercise-card "Rainbow Fire" "Exercise 4.13" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise13" rf/run]
+     ^{:key "Fire Blend"} [exercise-card "Fire Blend" "Exercise 4.14" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise14" rib/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
     [cards-container
