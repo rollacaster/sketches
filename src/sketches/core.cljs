@@ -36,6 +36,7 @@
             [sketches.nature-of-code.asteroids :as as]
             [sketches.nature-of-code.asteroids-with-particles :as ap]
             [sketches.nature-of-code.particles-with-repellers :as pr]
+            [sketches.nature-of-code.particles-repel :as prs]
             [sketches.nature-of-code.particles-on-click :as ac]
             [sketches.nature-of-code.shutter-in-pieces :as sip]
             [sketches.nature-of-code.bob :as bo]
@@ -216,7 +217,8 @@
      ^{:key "Particles on Click"} [exercise-card "Particles on Click" "Exercise 4.5" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise5" ac/run]
      ^{:key "Shutter in Pieces"} [exercise-card "Shutter in Pieces" "Exercise 4.6" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise6" sip/run]
      ^{:key "Mixed Particles"} [exercise-card "Mixed Particles" "Exercise 4.8" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise8" mip/run]
-     ^{:key "Particles with Repellers"} [exercise-card "Particles with Repellers" "Exercise 4.9" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise9" pr/run]
+     ^{:key "Particles with Repelers"} [exercise-card "Particles with Repellers" "Exercise 4.9" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise9" pr/run]
+     ^{:key "Particles repel"} [exercise-card "Particles repel" "Exercise 4.10" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise10" prs/run]
      ^{:key "Fire"} [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]]]
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
