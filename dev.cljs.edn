@@ -1,6 +1,2 @@
-{:main sketches.core
- :npm-deps false
-  :foreign-libs [{:file "dist/index.bundle.js"
-                 :provides ["nice-color-palettes" "bezier-easing"]
-                 :global-exports {nice-color-palettes Palettes
-                                  bezier-easing BezierEasing}}]}
+^{:npm {:bundles {"dist/index.bundle.js" "src/js/index.js"}}}
+{:main sketches.core}
