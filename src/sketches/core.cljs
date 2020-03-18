@@ -11,6 +11,7 @@
             [sketches.nature-of-code.fire-rainbow :as rf]
             [sketches.nature-of-code.fire-blend :as rib]
             [sketches.nature-of-code.circular-shapes :as cs]
+            [sketches.nature-of-code.box-shapes :as bs]
             [sketches.nature-of-code.noise-animate :as na]
             [sketches.nature-of-code.noise-detail :as nd]
             [sketches.nature-of-code.noise-terrain :as nt]
@@ -237,7 +238,8 @@
     [:h3.tracked.tc.tl-ns "Physics Libraries"]
     [cards-container
      [:<>
-      [exercise-card "Circular Shapes" "Exercise 5.1" "https://natureofcode.com/book/chapter-5-physics-libraries/#chapter05_exercise1" cs/run]]]]
+      [exercise-card "Circular Shapes" "Exercise 5.1" "https://natureofcode.com/book/chapter-5-physics-libraries/#chapter05_exercise1" cs/run]
+      [exercise-card "Box Shapes" "Exercise 5.2" "https://natureofcode.com/book/chapter-5-physics-libraries/#chapter05_exercise2" bs/run]]]]
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
     [cards-container
