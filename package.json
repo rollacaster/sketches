@@ -20,6 +20,7 @@
   "homepage": "https://rollacaster.github.io/sketches/",
   "dependencies": {
     "bezier-easing": "^2.1.0",
+    "matter-js": "^0.14.2",
     "nice-color-palettes": "^3.0.0"
   },
   "devDependencies": {

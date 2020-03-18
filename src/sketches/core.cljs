@@ -10,6 +10,7 @@
             [sketches.nature-of-code.fire :as f]
             [sketches.nature-of-code.fire-rainbow :as rf]
             [sketches.nature-of-code.fire-blend :as rib]
+            [sketches.nature-of-code.circular-shapes :as cs]
             [sketches.nature-of-code.noise-animate :as na]
             [sketches.nature-of-code.noise-detail :as nd]
             [sketches.nature-of-code.noise-terrain :as nt]
@@ -232,6 +233,11 @@
       [exercise-card "Particle with Images" "Exercise 4.12" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise12" pi/run]
       [exercise-card "Rainbow Fire" "Exercise 4.13" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise13" rf/run]
       [exercise-card "Fire Blend" "Exercise 4.14" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise14" rib/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Physics Libraries"]
+    [cards-container
+     [:<>
+      [exercise-card "Circular Shapes" "Exercise 5.1" "https://natureofcode.com/book/chapter-5-physics-libraries/#chapter05_exercise1" cs/run]]]]
    [:div
     [:h3.tracked.tc.tl-ns "Cellular Automata"]
     [cards-container
