@@ -1,8 +1,7 @@
 (ns sketches.noise-colors
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]
-            [nice-color-palettes]
-            [clojure.string :as s]))
+            [nice-color-palettes]))
 
 (def palettes (js->clj nice-color-palettes))
 
@@ -26,14 +25,13 @@
            [cell y] (map-indexed #(vector %1 (* %2 10)) (range (/ (q/height) w)))
            :let [nx (+ seed (/ row w))
                  ny (+ seed (/ cell w))]]
-       (do
-         (let [color (nth palette (q/round (q/map-range (q/noise nx ny) 0 1 0 (dec (count palette)))))
-               pos-noise (q/map-range (q/noise nx ny) 0 1 -20 30)]
-           (apply q/fill (concat color [127]))
-           (q/rect (+ pos-noise x)
-                      (+ pos-noise y)
-                      (q/map-range (q/noise nx ny) 0 1 10 20)
-                      (q/map-range (q/noise nx ny) 0 1 10 20))))))))
+       (let [color (nth palette (q/round (q/map-range (q/noise nx ny) 0 1 0 (dec (count palette)))))
+             pos-noise (q/map-range (q/noise nx ny) 0 1 -20 30)]
+         (apply q/fill (concat color [127]))
+         (q/rect (+ pos-noise x)
+                 (+ pos-noise y)
+                 (q/map-range (q/noise nx ny) 0 1 10 20)
+                 (q/map-range (q/noise nx ny) 0 1 10 20)))))))
 
 (defn update-state [])
 
