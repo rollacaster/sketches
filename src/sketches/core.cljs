@@ -169,7 +169,8 @@
     [:h3.tracked.tc.tl-ns "Color"]
     [cards-container
      [:<>
-      [exercise-card "Hello, color" "P_1_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_0_01" P-1-0-01/run]]]]])
+      [exercise-card "Hello, color" "P_1_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_0_01" P-1-0-01/run]
+      [exercise-card "Color spectrum in grid" "P-1-1-1-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_1_1_01" P-1-1-1-01/run]]]]])
 
 (defn nature-of-code []
   [:<>
