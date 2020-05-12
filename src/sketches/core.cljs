@@ -19,6 +19,7 @@
             [sketches.generative-desgin.P-01.P-1-1-1-01 :as P-1-1-1-01]
             [sketches.generative-desgin.P-01.P-1-1-2-01 :as P-1-1-2-01]
             [sketches.generative-desgin.P-01.P-1-2-1-01 :as P-1-2-1-01]
+            [sketches.generative-desgin.P-01.P-1-2-3-01 :as P-1-2-3-01]
             [sketches.heart-of-clojure :as hc]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]
             [sketches.inferno :as i]
@@ -174,7 +175,8 @@
       [exercise-card "Hello, color" "P_1_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_0_01" P-1-0-01/run]
       [exercise-card "Color spectrum in grid" "P-1-1-1-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_1_1_01" P-1-1-1-01/run]
       [exercise-card "Color spectrum in a circle" "P-1-1-2-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_1_2_01" P-1-1-2-01/run]
-      [exercise-card "Color palettes interpolation" "P-1-2-1-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_2_1_01" P-1-2-1-01/run]]]]])
+      [exercise-card "Color palettes interpolation" "P-1-2-1-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_2_1_01" P-1-2-1-01/run]
+      [exercise-card "Color palettes from rules" "P-1-2-3-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_1_2_3_01" P-1-2-3-01/run]]]]])
 
 (defn nature-of-code []
   [:<>
