@@ -22,6 +22,7 @@
             [sketches.generative-desgin.P-01.P-1-2-3-01 :as P-1-2-3-01]
             [sketches.generative-desgin.P-02.P-2-0-01 :as P-2-0-01]
             [sketches.generative-desgin.P-02.P-2-1-1-01 :as P-2-1-1-01]
+            [sketches.generative-desgin.P-02.P-2-1-2-01 :as P-2-1-2-01]
             [sketches.heart-of-clojure :as hc]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]
             [sketches.inferno :as i]
@@ -184,7 +185,8 @@
     [cards-container
      [:<>
       [exercise-card "Hello, Shape" "P_2_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_0_01" P-2-0-01/run]
-      [exercise-card "Alignment in a grid" "P_2_1_1_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_1_01" P-2-1-1-01/run]]]]])
+      [exercise-card "Alignment in a grid" "P_2_1_1_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_1_01" P-2-1-1-01/run]
+      [exercise-card "Movement in a grid" "P_2_1_2_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_2_01" P-2-1-2-01/run]]]]])
 
 (defn nature-of-code []
   [:<>
