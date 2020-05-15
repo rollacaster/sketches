@@ -10,6 +10,7 @@
 (defn update-state [])
 
 (defn draw []
+  (q/random-seed 0)
   (q/translate (/ (/ (q/width) tile-count) 2)
                (/ (/ (q/height) tile-count) 2))
   (q/background 255)
