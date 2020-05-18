@@ -24,6 +24,7 @@
             [sketches.generative-desgin.P-02.P-2-1-1-01 :as P-2-1-1-01]
             [sketches.generative-desgin.P-02.P-2-1-2-01 :as P-2-1-2-01]
             [sketches.generative-desgin.P-02.P-2-1-3-01 :as P-2-1-3-01]
+            [sketches.generative-desgin.P-02.P-2-1-4-01 :as P-2-1-4-01]
             [sketches.heart-of-clojure :as hc]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]
             [sketches.inferno :as i]
@@ -188,7 +189,8 @@
       [exercise-card "Hello, Shape" "P_2_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_0_01" P-2-0-01/run]
       [exercise-card "Alignment in a grid" "P_2_1_1_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_1_01" P-2-1-1-01/run]
       [exercise-card "Movement in a grid" "P_2_1_2_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_2_01" P-2-1-2-01/run]
-      [exercise-card "Complex modules in a grid" "P_2_1_3_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_3_01" P-2-1-3-01/run]]]]])
+      [exercise-card "Complex modules in a grid" "P_2_1_3_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_3_01" P-2-1-3-01/run]
+      [exercise-card "Checkboxes in a grid" "P_2_1_4_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_4_01" P-2-1-4-01/run true]]]]])
 
 (defn nature-of-code []
   [:<>
