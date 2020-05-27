@@ -88,7 +88,8 @@
             [sketches.rainbow-circles :as rc]
             [sketches.reverse-roots :as rr]
             [sketches.rotating-angles :as ra]
-            [sketches.generative-desgin.P-02.P-2-2-1-01 :as P-2-2-1-01]))
+            [sketches.generative-desgin.P-02.P-2-2-1-01 :as P-2-2-1-01]
+            [sketches.generative-desgin.P-02.P-2-2-3-01 :as P-2-2-3-01]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -194,7 +195,8 @@
       [exercise-card "Complex modules in a grid" "P_2_1_3_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_3_01" P-2-1-3-01/run]
       [exercise-card "Checkboxes in a grid" "P_2_1_4_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_4_01" P-2-1-4-01/run]
       [exercise-card "From grid to moiré" "P_2_1_5_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_1_5_01" P-2-1-5-01/run]
-      [exercise-card "Dumb agents" "P-2-2-1-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_2_1_01" P-2-2-1-01/run]]]]])
+      [exercise-card "Dumb agents" "P-2-2-1-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_2_1_01" P-2-2-1-01/run]
+      [exercise-card "Shape from agents" "P-2-2-3-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_2_3_01" P-2-2-3-01/run]]]]])
 
 (defn nature-of-code []
   [:<>
