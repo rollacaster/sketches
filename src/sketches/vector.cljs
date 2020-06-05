@@ -31,3 +31,11 @@
 (defn rotate [[x y] angle]
   [(- (* (Math/cos angle) x) (* (Math/sin angle) y))
    (+ (* (Math/sin angle) x) (* (Math/cos angle) y))])
+
+(defn from-angle
+  ([angle]
+   (from-angle angle 1))
+  ([angle length]
+   [(* length (Math/cos angle)) (* length (Math/sin angle))]))
+
+
