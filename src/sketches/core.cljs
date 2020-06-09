@@ -33,6 +33,7 @@
             [sketches.generative-desgin.P-02.P-2-2-6-01 :as P-2-2-6-01]
             [sketches.generative-desgin.P-02.P-2-3-1-01 :as P-2-3-1-01]
             [sketches.generative-desgin.P-02.P-2-3-3-01 :as P-2-3-3-01]
+            [sketches.generative-desgin.P-02.P-2-3-4-01 :as P-2-3-4-01]
             [sketches.heart-of-clojure :as hc]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]
             [sketches.inferno :as i]
@@ -206,7 +207,8 @@
       [exercise-card "Structural density from agents" "P-2-2-5-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_2_5_01" P-2-2-5-01/run]
       [exercise-card "Agents on a pendulum" "P-2-2-6-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_2_6_01" P-2-2-6-01/run ]
       [exercise-card "Drawing with brushes" "P-2-3-1-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_1_01" P-2-3-1-01/run ]
-      [exercise-card "Drawing with type" "P-2-3-3-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_3_01" P-2-3-3-01/run]]]]])
+      [exercise-card "Drawing with type" "P-2-3-3-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_3_01" P-2-3-3-01/run]
+      [exercise-card "Drawing with dynamic brush" "P-2-3-4-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_4_01" P-2-3-4-01/run]]]]])
 
 (defn nature-of-code []
   [:<>
