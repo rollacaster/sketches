@@ -97,7 +97,8 @@
             [sketches.particle-party :as pp]
             [sketches.rainbow-circles :as rc]
             [sketches.reverse-roots :as rr]
-            [sketches.rotating-angles :as ra]))
+            [sketches.rotating-angles :as ra]
+            [sketches.generative-desgin.P-03.P-3-0-01 :as P-3-0-01]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -212,7 +213,12 @@
       [exercise-card "Drawing with type" "P-2-3-3-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_3_01" P-2-3-3-01/run]
       [exercise-card "Drawing with dynamic brush" "P-2-3-4-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_4_01" P-2-3-4-01/run]
       [exercise-card "Drawing with complex modules" "P-2-3-6-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_6_01" P-2-3-6-01/run]
-      [exercise-card "Drawing with multiple brushes" "P-2-3-7-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_7_01" P-2-3-7-01/run]]]]])
+      [exercise-card "Drawing with multiple brushes" "P-2-3-7-01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_2_3_7_01" P-2-3-7-01/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Type"]
+    [cards-container
+     [:<>
+      [exercise-card "Hello, Type" "P_3_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_0_01" P-3-0-01/run]]]]])
 
 (defn nature-of-code []
   [:<>
