@@ -36,6 +36,8 @@
             [sketches.generative-desgin.P-02.P-2-3-4-01 :as P-2-3-4-01]
             [sketches.generative-desgin.P-02.P-2-3-6-01 :as P-2-3-6-01]
             [sketches.generative-desgin.P-02.P-2-3-7-01 :as P-2-3-7-01]
+            [sketches.generative-desgin.P-03.P-3-0-01 :as P-3-0-01]
+            [sketches.generative-desgin.P-03.P-3-1-2-01 :as P_3_1_2_01]
             [sketches.heart-of-clojure :as hc]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]
             [sketches.inferno :as i]
@@ -97,8 +99,7 @@
             [sketches.particle-party :as pp]
             [sketches.rainbow-circles :as rc]
             [sketches.reverse-roots :as rr]
-            [sketches.rotating-angles :as ra]
-            [sketches.generative-desgin.P-03.P-3-0-01 :as P-3-0-01]))
+            [sketches.rotating-angles :as ra]))
 
 (defn card [title sub-title children]
   [:div.bg-white.br2.flex.flex-column.justify-between.items-center.f3.black.mb3.mr3-ns
@@ -218,7 +219,8 @@
     [:h3.tracked.tc.tl-ns "Type"]
     [cards-container
      [:<>
-      [exercise-card "Hello, Type" "P_3_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_0_01" P-3-0-01/run]]]]])
+      [exercise-card "Hello, Type" "P_3_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_0_01" P-3-0-01/run]
+      [exercise-card "Text as blueprint" "P_3_1_2_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_2_01" P_3_1_2_01/run]]]]])
 
 (defn nature-of-code []
   [:<>
