@@ -38,6 +38,8 @@
             [sketches.generative-desgin.P-02.P-2-3-7-01 :as P-2-3-7-01]
             [sketches.generative-desgin.P-03.P-3-0-01 :as P-3-0-01]
             [sketches.generative-desgin.P-03.P-3-1-2-01 :as P_3_1_2_01]
+            [sketches.generative-desgin.P-03.P-3-1-3-01 :as P_3_1_3_01]
+            [sketches.generative-desgin.P-03.P-3-1-4-01 :as P_3_1_4_01]
             [sketches.heart-of-clojure :as hc]
             [sketches.icons :refer [play-icon reload-icon stop-icon]]
             [sketches.inferno :as i]
@@ -220,7 +222,9 @@
     [cards-container
      [:<>
       [exercise-card "Hello, Type" "P_3_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_0_01" P-3-0-01/run]
-      [exercise-card "Text as blueprint" "P_3_1_2_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_2_01" P_3_1_2_01/run]]]]])
+      [exercise-card "Text as blueprint" "P_3_1_2_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_2_01" P_3_1_2_01/run]
+      [exercise-card "Text Frequencies" "P_3_1_3_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_3_01" P_3_1_3_01/run]
+      #_[exercise-card "Text image" "P_3_1_4_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_4_01" P_3_1_4_01/run true]]]]])
 
 (defn nature-of-code []
   [:<>
