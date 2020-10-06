@@ -223,8 +223,8 @@
      [:<>
       [exercise-card "Hello, Type" "P_3_0_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_0_01" P-3-0-01/run]
       [exercise-card "Text as blueprint" "P_3_1_2_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_2_01" P_3_1_2_01/run]
-      [exercise-card "Text Frequencies" "P_3_1_3_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_3_01" P_3_1_3_01/run]
-      #_[exercise-card "Text image" "P_3_1_4_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_4_01" P_3_1_4_01/run true]]]]])
+      [exercise-card "Text frequencies" "P_3_1_3_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_3_01" P_3_1_3_01/run]
+      [exercise-card "Text treemap" "P_3_1_4_01" "http://www.generative-gestaltung.de/2/sketches/?01_P/P_3_1_4_01" P_3_1_4_01/run]]]]])
 
 (defn nature-of-code []
   [:<>
