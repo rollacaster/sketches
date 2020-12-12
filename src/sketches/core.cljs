@@ -116,7 +116,7 @@
   (q/with-sketch (q/get-sketch-by-id id)
     (q/no-loop)))
 
-(defn sketch [run-sketch run-immediately]
+(defn sketch [title run-sketch run-immediately]
   (let [is-started (r/atom false)]
     (fn []
       (if (or @is-started run-immediately)
@@ -136,7 +136,7 @@
         [:div
          [:div.w5.h5.ma4.flex.justify-center.items-center.bg-gray
           [:button.button.bg-transparent.bn.white.pointer
-           {:on-click #(reset! is-started true)}
+           {:on-click #(reset! is-started true) :aria-label (str "Run " title " Sketch")}
            (play-icon :medium "white")]]]))))
 
 (defn rac-card [title run-sketch run-immediately]
@@ -144,14 +144,14 @@
     [card
      title
      ""
-     [sketch run-sketch run-immediately]]))
+     [sketch title run-sketch run-immediately]]))
 
 (defn exercise-card [title exercise-title exercise-link run-sketch run-immediately]
   (fn []
     [card
      title
-     [:a.link.bb {:href exercise-link :target "_blank"} exercise-title]
-     [sketch run-sketch run-immediately]]))
+     [:a.link.bb {:href exercise-link :target "_blank" :rel "noreferrer"} exercise-title]
+     [sketch title run-sketch run-immediately]]))
 
 (defn section [title description]
   [:div.mb4.tc.tl-ns
