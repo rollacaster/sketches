@@ -1,0 +1,155 @@
+(ns sketches.nature-of-code.core
+  (:require [sketches.components :refer [cards-container exercise-card section]]
+            [sketches.nature-of-code.angular-oscilliate :as ao]
+            [sketches.nature-of-code.asteroids :as as]
+            [sketches.nature-of-code.asteroids-with-particles :as ap]
+            [sketches.nature-of-code.balloon :as b]
+            [sketches.nature-of-code.bob :as bo]
+            [sketches.nature-of-code.bouncing-ball :as bb]
+            [sketches.nature-of-code.box-shapes :as bs]
+            [sketches.nature-of-code.cannon :as cn]
+            [sketches.nature-of-code.car :as c]
+            [sketches.nature-of-code.circular-shapes :as cs]
+            [sketches.nature-of-code.combined-wave :as co]
+            [sketches.nature-of-code.custom-waves :as cw]
+            [sketches.nature-of-code.dynamic-origin :as do]
+            [sketches.nature-of-code.fire :as f]
+            [sketches.nature-of-code.fire-blend :as rib]
+            [sketches.nature-of-code.fire-rainbow :as rf]
+            [sketches.nature-of-code.fluid :as fl]
+            [sketches.nature-of-code.force-push :as fp]
+            [sketches.nature-of-code.frictions :as fr]
+            [sketches.nature-of-code.game-of-life :as gl]
+            [sketches.nature-of-code.insect :as in]
+            [sketches.nature-of-code.invisible-attractors :as ia]
+            [sketches.nature-of-code.koch-curve :as kc]
+            [sketches.nature-of-code.mixed-particles :as mip]
+            [sketches.nature-of-code.mouse-acceleration :as ma]
+            [sketches.nature-of-code.multi-pendulum :as mp]
+            [sketches.nature-of-code.multi-springs :as ms]
+            [sketches.nature-of-code.noise-animate :as na]
+            [sketches.nature-of-code.noise-car :as nc]
+            [sketches.nature-of-code.noise-detail :as nd]
+            [sketches.nature-of-code.noise-terrain :as nt]
+            [sketches.nature-of-code.own-cantor :as oc]
+            [sketches.nature-of-code.own-force :as of]
+            [sketches.nature-of-code.paint-splatter :as p]
+            [sketches.nature-of-code.particle-force :as pf]
+            [sketches.nature-of-code.particles-on-click :as ac]
+            [sketches.nature-of-code.particles-repel :as prs]
+            [sketches.nature-of-code.particles-with-images :as pi]
+            [sketches.nature-of-code.particles-with-repellers :as pr]
+            [sketches.nature-of-code.perlin-wave :as pw]
+            [sketches.nature-of-code.random-cellular-automaton :as rca]
+            [sketches.nature-of-code.random-walk :as rw]
+            [sketches.nature-of-code.random-walk-custom-step :as rwc]
+            [sketches.nature-of-code.random-walk-dynamic :as rwd]
+            [sketches.nature-of-code.random-walk-gaussian :as rwg]
+            [sketches.nature-of-code.random-walk-noise :as rwn]
+            [sketches.nature-of-code.repulse-mouse :as rm]
+            [sketches.nature-of-code.rotate-baton :as rb]
+            [sketches.nature-of-code.rotating-particle :as rp]
+            [sketches.nature-of-code.shutter-in-pieces :as sip]
+            [sketches.nature-of-code.sierpinski :as si]
+            [sketches.nature-of-code.spiral :as sp]
+            [sketches.nature-of-code.surface-area :as sa]
+            [sketches.nature-of-code.vehicle :as ve]))
+
+(defn main []
+  [:<>
+   [section
+    "Nature of Code"
+    [:<>
+     "Exercises of "
+     [:a.pointer.bb.link.white {:href "https://twitter.com/shiffman"} "Daniel Shiffman's"] " "
+     [:a.pointer.bb.link.white {:href "https://natureofcode.com/"} "Nature of Code"]
+     " implemented in ClojureScript."]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Introduction"]
+    [cards-container
+     [:<>
+      [exercise-card "Random Walk" "Exercise I.1" "https://natureofcode.com/book/introduction/#exercise-i1" rw/run]
+      [exercise-card "Random Walk II" "Exercise I.3" "https://natureofcode.com/book/introduction/#exercise-i3" rwd/run]
+      [exercise-card "Paint Splatter" "Exercise I.4" "https://natureofcode.com/book/introduction/#exercise-i4" p/run]
+      [exercise-card "Random Walk III" "Exercise I.5" "https://natureofcode.com/book/introduction/#exercise-i5" rwg/run]
+      [exercise-card "Random Walk IV" "Exercise I.6" "https://natureofcode.com/book/introduction/#exercise-i6" rwc/run]
+      [exercise-card "Random Walk V" "Exercise I.7" "https://natureofcode.com/book/introduction/#exercise-i7" rwn/run]
+      [exercise-card "Noise Detail" "Exercise I.8" "https://natureofcode.com/book/introduction/#exercise-i8" nd/run]
+      [exercise-card "Noise Animate" "Exercise I.9" "https://natureofcode.com/book/introduction/#exercise-i9" na/run]
+      [exercise-card "Noise Terrain" "Exercise I.10" "https://natureofcode.com/book/introduction/#exercise-i10" nt/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Vectors"]
+    [cards-container
+     [:<>
+      [exercise-card "Bouncing Ball" "Exercise 1.3" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise3" bb/run]
+      [exercise-card "Car" "Exercise 1.5" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise5" c/run]
+      [exercise-card "Noise Car" "Exercise 1.6" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise6" nc/run]
+      [exercise-card "Mouse Acceleration" "Exercise 1.8" "https://natureofcode.com/book/chapter-1-vectors#chapter01_exercise8" ma/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Forces"]
+    [cards-container
+     [:<>
+      [exercise-card "Balloon" "Exercise 2.1" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise1" b/run]
+      [exercise-card "Force Push" "Exercise 2.3" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise3" fp/run]
+      [exercise-card "Frictions" "Exercise 2.4" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise4" fr/run]
+      [exercise-card "Fluid" "Exercise 2.5" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise5" fl/run]
+      [exercise-card "Surface Area" "Exercise 2.6" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise6" sa/run]
+      ;; Fluid resistance does not only work opposite to the velocity vector, but also perpendicular to it. This is known as “lift-induced drag” and will cause an airplane with an angled wing to rise in altitude. Try creating a simulation of lift.
+      #_[exercise-card "Lift-induced Drag" "Exercise 2.7" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise7" ld/run true]
+      [exercise-card "Invisible Attractors" "Exercise 2.8" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise8" ia/run]
+      [exercise-card "Own Force" "Exercise 2.9" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise9" of/run]
+      [exercise-card "Repulse Mouse" "Exercise 2.10" "https://natureofcode.com/book/chapter-2-forces#chapter02_exercise10" rm/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Oscillation"]
+    [cards-container
+     [:<>
+      [exercise-card "Rotate baton" "Exercise 3.1" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise1" rb/run]
+      [exercise-card "Cannon" "Exercise 3.2" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise2" cn/run]
+      [exercise-card "Vehicle" "Exercise 3.3" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise3" ve/run]
+      [exercise-card "Spiral" "Exercise 3.4" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise4" sp/run]
+      [exercise-card "Asteroids" "Exercise 3.5" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise5" as/run]
+      [exercise-card "Bob" "Exercise 3.6" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise6" bo/run]
+      [exercise-card "Insect" "Exercise 3.7" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise7" in/run]
+      [exercise-card "Angular Oscilliate" "Exercise 3.8" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise8" ao/run]
+      [exercise-card "Perlin Wave" "Exercise 3.9" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise9" pw/run]
+      [exercise-card "Custom Waves" "Exercise 3.10" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise10" cw/run]
+      [exercise-card "Combined Wave" "Exercise 3.11" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise11" co/run]
+      [exercise-card "Multi Pendulum" "Exercise 3.12" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise12" mp/run]
+      [exercise-card "Multi Springs" "Exercise 3.16" "https://natureofcode.com/book/chapter-3-oscillation#chapter03_exercise16" ms/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Particle Systems"]
+    [cards-container
+     [:<>
+      [exercise-card "Particle Force" "Exercise 4.1" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise1" pf/run]
+      [exercise-card "Rotating Particle" "Exercise 4.2" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise2" rp/run]
+      [exercise-card "Dynamic Origin" "Exercise 4.3" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise3" do/run]
+      [exercise-card "Asteroids with Particles" "Exercise 4.4" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise4" ap/run]
+      [exercise-card "Particles on Click" "Exercise 4.5" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise5" ac/run]
+      [exercise-card "Shutter in Pieces" "Exercise 4.6" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise6" sip/run]
+      [exercise-card "Mixed Particles" "Exercise 4.8" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise8" mip/run]
+      [exercise-card "Particles with Repellers" "Exercise 4.9" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise9" pr/run]
+      [exercise-card "Particles repel" "Exercise 4.10" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise10" prs/run]
+      [exercise-card "Fire" "Exercise 4.11" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise11" f/run]
+      [exercise-card "Particle with Images" "Exercise 4.12" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise12" pi/run]
+      [exercise-card "Rainbow Fire" "Exercise 4.13" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise13" rf/run]
+      [exercise-card "Fire Blend" "Exercise 4.14" "https://natureofcode.com/book/chapter-4-particle-systems#chapter04_exercise14" rib/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Physics Libraries"]
+    [cards-container
+     [:<>
+      [exercise-card "Circular Shapes" "Exercise 5.1" "https://natureofcode.com/book/chapter-5-physics-libraries/#chapter05_exercise1" cs/run]
+      [exercise-card "Box Shapes" "Exercise 5.2" "https://natureofcode.com/book/chapter-5-physics-libraries/#chapter05_exercise2" bs/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Cellular Automata"]
+    [cards-container
+     [:<>
+      [exercise-card "Random CA" "Exercise 7.1" "https://natureofcode.com/book/chapter-7-cellular-automata/#chapter07_exercise1" rca/run]
+      [exercise-card "Game of Life" "Exercise 7.6" "https://natureofcode.com/book/chapter-7-cellular-automata/#chapter07_exercise6" gl/run]]]]
+   [:div
+    [:h3.tracked.tc.tl-ns "Fractals"]
+    [cards-container
+     [:<>
+      [exercise-card "Own Cantor" "Exercise 8.1" "https://natureofcode.com/book/chapter-8-fractals/#chapter08_exercise1" oc/run]
+      [exercise-card "Koch Curve" "Exercise 8.2" "https://natureofcode.com/book/chapter-8-fractals/#chapter08_exercise2" kc/run]
+      [exercise-card "Sierpinski" "Exercise 8.5" "https://natureofcode.com/book/chapter-8-fractals/#chapter08_exercise5" si/run]]]]])
+

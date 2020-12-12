@@ -1,4 +1,4 @@
-(ns sketches.own-sketches.flowers
+(ns sketches.rac-sketches.flowers
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]))
 

@@ -1,4 +1,4 @@
-(ns sketches.own-sketches.rainbow-circles
+(ns sketches.rac-sketches.rainbow-circles
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]))
 

@@ -1,4 +1,4 @@
-(ns sketches.own-sketches.inferno
+(ns sketches.rac-sketches.fire-ball
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]
             [sketches.vector :as v]
@@ -19,7 +19,7 @@
 (defn create-particle []
   {:acceleration [0 0]
    :velocity [0 0]
-   :location [(/ (q/width) 2) (q/height)]
+   :location [(/ (q/width) 2) (* (q/height) 0.8)]
    :lifespan 255})
 
 (defn update-state [{:keys [particles]}]
@@ -34,15 +34,15 @@
     (dotimes [i 6]
       (q/fill (q/lerp-color red blue (/ i 5)))
       (q/ellipse x y
-                 (/ (* 255 (/ 64 (inc i))) lifespan)
-                 (/ (* 255 (/ 64 (inc i))) lifespan)))))
+                 (/ (* lifespan (/ 256 (inc i))) 255)
+                 (/ (* lifespan (/ 256 (inc i))) 255)))))
 
 (defn draw [{:keys [particles]}]
   (q/clear)
   (doall (map draw-particle particles)))
 
 (defn run [host]
-  (q/defsketch inferno
+  (q/defsketch particles
     :host host
     :setup setup
     :draw draw
