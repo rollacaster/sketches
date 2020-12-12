@@ -1,4 +1,4 @@
-(ns sketches.particle-party
+(ns sketches.own-sketches.particle-party
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]
             [nice-color-palettes]

@@ -1,4 +1,4 @@
-(ns sketches.fire-ball
+(ns sketches.own-sketches.fire-ball
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]
             [sketches.vector :as v]

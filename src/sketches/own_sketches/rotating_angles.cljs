@@ -1,4 +1,4 @@
-(ns sketches.rotating-angles
+(ns sketches.own-sketches.rotating-angles
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]))
 

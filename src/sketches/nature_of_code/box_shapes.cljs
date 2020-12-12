@@ -3,7 +3,7 @@
             [oops.core :refer [ocall oget]]
             [quil.core :as q :include-macros true]
             [quil.middleware :as md]
-            [sketches.matter :as m]))
+            [sketches.nature-of-code.matter :as m]))
 
 (defn setup []
   (q/frame-rate 30)

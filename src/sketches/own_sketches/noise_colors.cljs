@@ -1,4 +1,4 @@
-(ns sketches.noise-colors
+(ns sketches.own-sketches.noise-colors
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]
             [nice-color-palettes]))

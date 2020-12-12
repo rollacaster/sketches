@@ -1,4 +1,4 @@
-(ns sketches.matter
+(ns sketches.nature-of-code.matter
   (:require [matter]
             [oops.core :refer [ocall oget]]
             [quil.core :as q]))

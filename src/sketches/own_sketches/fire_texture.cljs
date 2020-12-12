@@ -1,4 +1,4 @@
-(ns sketches.fire-texture
+(ns sketches.own-sketches.fire-texture
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]
             [sketches.vector :as v]))

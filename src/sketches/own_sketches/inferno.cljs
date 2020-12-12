@@ -1,4 +1,4 @@
-(ns sketches.inferno
+(ns sketches.own-sketches.inferno
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]
             [sketches.vector :as v]

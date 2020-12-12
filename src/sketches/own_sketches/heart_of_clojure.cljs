@@ -1,4 +1,4 @@
-(ns sketches.heart-of-clojure
+(ns sketches.own-sketches.heart-of-clojure
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]))
 
