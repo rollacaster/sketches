@@ -2,5 +2,7 @@
         reagent {:mvn/version "0.10.0"}
         quil {:mvn/version "3.1.0"
               :exclusions [com.lowagie/itext]}
-        binaryage/oops {:mvn/version "0.7.0"}}
+        binaryage/oops {:mvn/version "0.7.0"}
+        rollacaster/clj-axidraw {:git/url "https://github.com/rollacaster/clj-axidraw"
+                                 :sha "e31824cf8def9dd01d9b3aa5a5f2e5eddf70f900"}}
  :paths ["src" "target" "resources"]}
