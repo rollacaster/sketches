@@ -1,4 +1,4 @@
 * Sketches by [[https://twitter.com/rollacaster][@rollacaster]]
-Various sketches I create to learn more about create visual programming.
+Various sketches created to learn more about creative visual programming.
 
 https://rollacaster.github.io/sketches/
