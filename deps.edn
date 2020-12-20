@@ -4,5 +4,8 @@
               :exclusions [com.lowagie/itext]}
         binaryage/oops {:mvn/version "0.7.0"}
         rollacaster/clj-axidraw {:git/url "https://github.com/rollacaster/clj-axidraw"
-                                 :sha "e31824cf8def9dd01d9b3aa5a5f2e5eddf70f900"}}
+                                 :sha "e31824cf8def9dd01d9b3aa5a5f2e5eddf70f900"}
+        thi.ng/geom {:mvn/version "1.0.0-RC4"}
+        thi.ng/math {:mvn/version "0.3.0"}
+        thi.ng/color {:mvn/version "1.4.0"}}
  :paths ["src" "target" "resources"]}
