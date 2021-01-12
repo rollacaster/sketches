@@ -91,12 +91,13 @@
       </div>
     </body>
 </html>"))
-(->> scene
-     adapt/all-as-svg
-     svg/serialize
-     (spit "temp.svg"))
-(->> scene
-     adapt/all-as-svg
-     svg/serialize
-     html
-     (spit "index.html"))
+(comment
+  (->> scene
+       adapt/all-as-svg
+       svg/serialize
+       (spit "temp.svg"))
+  (->> scene
+       adapt/all-as-svg
+       svg/serialize
+       html
+       (spit "index.html")))
