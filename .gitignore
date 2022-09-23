@@ -6,4 +6,4 @@ dist/
 /.clj-kondo/
 /.lsp/
 /.shadow-cljs/
-/public/js/cljs-runtime
+/public/js/
