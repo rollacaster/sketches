@@ -20,8 +20,7 @@ jobs:
       run: npm install
     - name: Build JS
       run: npx shadow-cljs release app
-    - name: Deploy
-      uses: maxheld83/ghpages@v0.3.0
-      env:
-        GH_PAT: ${{ secrets.GH_PAT }}
-        BUILD_DIR: public/
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: public
