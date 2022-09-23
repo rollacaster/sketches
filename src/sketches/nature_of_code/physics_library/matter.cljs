@@ -1,34 +1,33 @@
 (ns sketches.nature-of-code.physics-library.matter
-  (:require [matter]
-            [oops.core :refer [ocall oget]]
+  (:require [matter-js]
             [quil.core :as q]))
 
-(def bodies (oget matter "Bodies"))
-(def world (oget matter "World"))
+(def bodies (.-Bodies matter-js))
+(def world (.-World matter-js))
 
 (defn rect
   ([x y width height]
    (rect x y width height nil))
   ([x y width height params]
-   (ocall bodies "rectangle" x y width height (clj->js params))))
+   (.rectangle bodies x y width height (clj->js params))))
 
 (defn circle
   ([x y width height]
    (circle x y width height nil))
   ([x y width height params]
-   (ocall bodies "circle" x y width height (clj->js params))))
+   (.circle bodies x y width height (clj->js params))))
 
 (defn add [engine & composites]
-  (ocall world "add" (oget engine "world") (clj->js composites))
+  (.add world ^js (.-world engine) (clj->js composites))
   engine)
 
 (defn update-engine [engine]
-  (ocall (oget matter "Engine") "update" engine (/ 1000 30)))
+  (.update (.-Engine matter-js) engine (/ 1000 30)))
 
 (defn render [engine]
   (q/clear)
-  (doseq [body (ocall (oget matter "Composite") "allBodies" (oget engine "world"))]
+  (doseq [body (.allBodies (.-Composite matter-js) ^js (.-world engine))]
    (q/begin-shape)
-   (doseq [vert (oget body "vertices")]
-     (q/vertex (oget vert "x") (oget vert "y")))
+   (doseq [vert (.-vertices body)]
+     (q/vertex (.-x vert) (.-y vert)))
    (q/end-shape :close)))

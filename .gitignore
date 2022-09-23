@@ -3,3 +3,7 @@
 target/
 node_modules/
 dist/
+/.clj-kondo/
+/.lsp/
+/.shadow-cljs/
+/public/js/cljs-runtime

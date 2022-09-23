@@ -20,5 +20,3 @@
   (axidraw/raise-pen)
   (axidraw/lower-pen)
   (def file-name "temp/sketch.svg"))
-
-

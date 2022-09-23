@@ -1,0 +1,20 @@
+{:nrepl {:port 9200}
+ :dev-http {9201 "public"}
+ :source-paths
+ ["src"]
+
+ :dependencies
+ [[reagent "1.1.1"]
+  [com.bhauman/figwheel-main "0.2.3"]
+  [reagent "0.10.0"]
+  [quil "3.1.0"]
+  [thi.ng/geom "1.0.0-RC4"]
+  [thi.ng/math "0.3.0"]
+  [thi.ng/color "1.4.0"]]
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :compiler-options {:output-feature-set :es-next}
+        :modules {:main {:entries [sketches.core]}}}}}

@@ -24,15 +24,15 @@
   (doseq [item (.-items treemap)]
     (q/fill 255)
     (q/stroke 0)
-    (q/rect (.-x item) (.-y item) (.-w item) (.-h item))
+    (q/rect ^js (.-x item) ^js (.-y item) ^js (.-w item) ^js (.-h item))
     (let [word (.-data item)
           text-width (q/text-width word)
           max-font-size (/ (* 100 (* (.-w item) 0.9)) text-width)
-          font-size (js/Math.min max-font-size (* (.-h item) 0.9))]
+          font-size (js/Math.min max-font-size (* ^js (.-h item) 0.9))]
       (q/text-size font-size)
       (q/fill 0)
       (q/no-stroke)
-      (q/text word (+ (.-x item) (/ (.-w item) 2)) (+ (.-y item) (* (.-h item) 0.8)))))
+      (q/text word (+ ^js (.-x item) (/ ^js (.-w item) 2)) (+ ^js (.-y item) (* ^js (.-h item) 0.8)))))
   (q/no-loop))
 
 (defn run [host]

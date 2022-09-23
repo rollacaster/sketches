@@ -9,7 +9,8 @@
             [sketches.rac-sketches.particle-party :as pp]
             [sketches.rac-sketches.rainbow-circles :as rc]
             [sketches.rac-sketches.reverse-roots :as rr]
-            [sketches.rac-sketches.rotating-angles :as ra]))
+            [sketches.rac-sketches.rotating-angles :as ra]
+            [sketches.rac-sketches.text-snake :as ts]))
 
 (defn rac-card [title run-sketch run-immediately]
   (fn []
@@ -24,6 +25,7 @@
     [cards-container
      [:<>
       #_[rac-card "Margarete Fountain" mf/run true]
+      [rac-card "Text Snake" ts/run true]
       [rac-card "Noise Colors" noc/run]
       [rac-card "Heart of Clojure" hc/run]
       [rac-card "Inferno" i/run]
@@ -34,4 +36,3 @@
       [rac-card "Rainbow Circles" rc/run]
       [rac-card "Oscillating Angles" ra/run ]
       [rac-card "Particle Party" pp/run]]]]])
-

@@ -21,10 +21,14 @@
   "dependencies": {
     "bezier-easing": "^2.1.0",
     "matter-js": "^0.14.2",
-    "nice-color-palettes": "^3.0.0"
+    "nice-color-palettes": "^3.0.0",
+    "p5": "^1.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "shadow-cljs": "^2.20.2",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   }
 }

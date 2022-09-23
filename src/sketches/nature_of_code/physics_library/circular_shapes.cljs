@@ -1,13 +1,12 @@
 (ns sketches.nature-of-code.physics-library.circular-shapes
-  (:require matter
-            [oops.core :refer [ocall oget]]
+  (:require matter-js
             [quil.core :as q :include-macros true]
             [quil.middleware :as md]
-            [sketches.nature-of-code.physics-library.matter :as m]))
+            [sketches.nature-of-code.physics-library.matter :as m]))-
 
 (defn setup []
   (q/frame-rate 30)
-  (let [engine (ocall (oget matter "Engine") "create")
+  (let [engine (.create (.-Engine matter-js))
         ground (m/rect 150 300 300 60 {:isStatic true})]
     (m/add engine ground)))
 

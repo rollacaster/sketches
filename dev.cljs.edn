@@ -1,2 +1,0 @@
-^{:npm {:bundles {"dist/index.bundle.js" "src/js/index.js"}}}
-{:main sketches.core}

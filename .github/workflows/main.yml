@@ -6,7 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v1
     - name: Clojure install
@@ -18,14 +18,10 @@ jobs:
       uses: actions/setup-node@v1
     - name: npm install
       run: npm install
-    - name: Build js
-      run: npx webpack
-    - name: Build
-      run: |
-        clojure -m figwheel.main -O advanced -bo dev
-        cp -r resources/public/* target/public/
+    - name: Build JS
+      run: npx shadow-cljs release app
     - name: Deploy
       uses: maxheld83/ghpages@v0.2.1
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
-        BUILD_DIR: "target/public"
+        BUILD_DIR: "public"
