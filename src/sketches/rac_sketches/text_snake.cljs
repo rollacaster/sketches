@@ -2,9 +2,9 @@
   (:require [quil.core :as q :include-macros true]
             [quil.middleware :as md]))
 
-(def x-offset 30)
+(def x-offset 15)
 (def step 15)
-(def path-count 10)
+(def path-count 11)
 (def height 300)
 (def speed 3)
 
@@ -12,12 +12,12 @@
   (q/text-align :center)
   (q/text-size 30)
   (->> "HELLO!"
-       (repeat 22)
+       (repeat 19)
        (apply str)
        (map-indexed
         (fn [i letter]
           {:i 0
-           :start (* i 8)
+           :start (* i 10)
            :letter (str letter)}))))
 
 (defmulti length first)
@@ -48,8 +48,7 @@
                      (if (even? i) 0 q/PI)
                      (if (even? i) q/PI q/TWO-PI)
                      (even? i)]
-                    [:line x step x (- height step)
-                     (even? i)]])))))
+                    [:line x step x (- height step) (even? i)]])))))
 
 (def curve-length (reduce + (map length curved-path)))
 
@@ -57,22 +56,23 @@
   (->> curved-path
        (reduce (fn [total-length el]
                  (let [el-length (length el)]
-                   (if (>= (+ total-length el-length speed) t)
+                   (if (>= (Math/ceil (+ total-length el-length speed)) t)
                      (reduced (position el (/ (- t total-length) el-length)))
                      (+ total-length (length el))))) 0)))
+
 (defn draw [letters]
   (q/clear)
-  (q/translate (q/width) 0)
-  (q/rotate q/HALF-PI)
   (doseq [{:keys [i letter]} letters]
-    (let [[x y] (path-pos i)]
+    (let [[x y] (path-pos i)
+          [nx ny] (path-pos (+ i speed))]
       (q/push-matrix)
       (q/translate x y)
-      (q/rotate (- q/HALF-PI))
+
+      (q/rotate (+ (Math/atan2 (- ny y) (- nx x)) (- q/HALF-PI)))
       (q/fill 0)
+      (q/rotate q/PI)
       (q/text letter 0 0)
       (q/pop-matrix))))
-
 
 (defn update-letter [{:keys [start] :as letter}]
   (update letter :i (fn [i] (if (and (< i curve-length) (< start (q/frame-count)))
