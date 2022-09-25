@@ -30,7 +30,7 @@
   (let [is-started (r/atom false)]
     (fn []
       (if (or @is-started run-immediately)
-        (let [id (str (random-uuid))]
+        (let [id (str title)]
           [(with-meta (fn [] [:div.flex.flex-column.items-center
                               [:div.w5.h5.mt4.mh4.mb3 {:id id}]
                               [:div.flex.h1

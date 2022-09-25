@@ -25,7 +25,7 @@
     [cards-container
      [:<>
       #_[rac-card "Margarete Fountain" mf/run true]
-      [rac-card "Text Snake" ts/run true]
+      [rac-card "Text Snake" ts/run]
       [rac-card "Noise Colors" noc/run]
       [rac-card "Heart of Clojure" hc/run]
       [rac-card "Inferno" i/run]
